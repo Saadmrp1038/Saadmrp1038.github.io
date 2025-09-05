@@ -1,18 +1,10 @@
 # Authors
 
-Name Name:
-  name        : "Name Name"
-  uri         : "http://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
+Saad Mohammad Rafid Pial:
+  name        : "Saad Mohammad Rafid Pial"
+  uri         : "https://saadmrp1038.github.io"
+  email       : "saadmrp@gmail.com"
+  bio         : "Computer Science and Engineering student at BUET, Software Engineer at Monsha.AI, and Research Intern at University of Illinois Urbana-Champaign. Passionate about AI agents, system reliability, and human-computer interaction."
   avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+  github      : "Saadmrp1038"
+  phone       : "+8801531551419"

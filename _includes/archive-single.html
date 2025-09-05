@@ -34,6 +34,10 @@
       {% endif %}
     </h2>
     
+    {% if post.authors %}
+      <p class="archive__item-authors"><strong>Authors:</strong> {{ post.authors }}</p>
+    {% endif %}
+    
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
@@ -41,7 +45,13 @@
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% if post.venue contains 'To be submitted' or post.venue contains 'Soon to be submitted' or post.venue contains 'Under review' or post.venue contains 'In preparation' %}
+            <p>Soon to be submitted at <i>{{ post.venue | remove: ' (To be submitted)' | remove: ' (Soon to be submitted)' | remove: ' (Under review)' | remove: ' (In preparation)' }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif post.venue contains 'Accepted' or post.venue contains 'Accepted at' %}
+            <p>Accepted at <i>{{ post.venue | remove: ' (Accepted)' | remove: ' (Accepted at)' }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% else %}
+            <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% endif %}
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
