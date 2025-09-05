@@ -13,7 +13,7 @@ title                    : "Pial's Homepage"
 title_separator          : "-"
 name                     : &name "Saad Mohammad Rafid Pial"
 description              : &description "Computer Science and Engineering student at BUET, Software Engineer at Monsha.AI, and Research Intern at University of Illinois Urbana-Champaign. Passionate about AI agents, system reliability, and human-computer interaction."
-url                      : # https://saadmrp1038.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : https://saadmrp1038.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Saadmrp1038/Saadmrp1038.github.io"
 
@@ -28,7 +28,7 @@ author:
   bio              : "Research Intern at xlab, University of Illinois Urbana-Champaign.<br>Research Intern at LUCID Lab, Towson University.<br>Software Engineer at Monsha.AI."
   location         : "Dhaka, Bangladesh"
   # employer         : "Monsha.AI"
-  uri              : "https://saadmrp1038.github.io"
+  uri              : # "https://saadmrp1038.github.io"
   email            : "saadmrp@gmail.com" 
 
   # Academic websites
