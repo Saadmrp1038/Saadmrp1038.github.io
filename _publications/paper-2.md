@@ -5,8 +5,8 @@ category: conferences
 permalink: /publication/trace2script
 excerpt: "Trace2Script is a novel two-stage framework that generates deterministic and maintainable Web UI test scripts from natural language test cases. The system uses an LLM-guided web agent for non-deterministic web traversal, then applies heuristic algorithms to convert traces into robust, executable test scripts."
 date: 2026-01-01
-venue: 'FSE (Soon to be submitted)'
-authors: "Jaid Monwar Chowdhury, Saad Mohammad Rafid Pial, Junaed Younus Khan, Rownok Ratul, Anindya Iqbal"
+venue: 'FSE (Submitted)'
+authors: "Saad Mohammad Rafid Pial, Jaid Monwar Chowdhury, Junaed Younus Khan, Rownok Ratul, Anindya Iqbal"
 # slidesurl: ''
 # paperurl: ''
 # bibtexurl: ''

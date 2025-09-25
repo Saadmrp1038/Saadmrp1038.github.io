@@ -44,6 +44,8 @@ layout: default
         {% elsif page.venue and page.date %}
           {% if page.venue contains 'To be submitted' or page.venue contains 'Soon to be submitted' or page.venue contains 'Under review' or page.venue contains 'In preparation' %}
             <p>Soon to be submitted at <i>{{ page.venue | remove: ' (To be submitted)' | remove: ' (Soon to be submitted)' | remove: ' (Under review)' | remove: ' (In preparation)' }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif page.venue contains 'Submitted' or page.venue contains 'Submitted at' %}
+            <p>Submitted at <i>{{ page.venue | remove: ' (Submitted)' | remove: ' (Submitted at)' }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.venue contains 'Accepted' or page.venue contains 'Accepted at' %}
             <p>Accepted at <i>{{ page.venue | remove: ' (Accepted)' | remove: ' (Accepted at)' }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% else %}

@@ -47,6 +47,8 @@
         {% elsif post.collection == 'publications' %}
           {% if post.venue contains 'To be submitted' or post.venue contains 'Soon to be submitted' or post.venue contains 'Under review' or post.venue contains 'In preparation' %}
             <p>Soon to be submitted at <i>{{ post.venue | remove: ' (To be submitted)' | remove: ' (Soon to be submitted)' | remove: ' (Under review)' | remove: ' (In preparation)' }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif post.venue contains 'Submitted' or post.venue contains 'Submitted at' %}
+            <p>Submitted at <i>{{ post.venue | remove: ' (Submitted)' | remove: ' (Submitted at)' }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif post.venue contains 'Accepted' or post.venue contains 'Accepted at' %}
             <p>Accepted at <i>{{ post.venue | remove: ' (Accepted)' | remove: ' (Accepted at)' }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% else %}

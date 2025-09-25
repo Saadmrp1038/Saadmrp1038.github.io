@@ -7,9 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Pial. I recently graduated from the Department of Computer Science and Engineering at [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/).
+Hi, I'm Pial, a Computer Science and Engineering graduate from [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/) with a passion for AI, systems engineering, and competitive programming.
 
-I'm currently a research intern at two labs: xlab at the University of Illinois Urbana-Champaign, where I'm advised by [Prof. Tianyin Xu](https://tianyin.github.io/), and LUCID Lab at Towson University, working under [Prof. Khandakar Ashrafi Akbar](https://scholar.google.com/citations?user=lPz7L8kAAAAJ&hl=en). My research interests focus on the intersection of AI agents, systems, and software.
+I'm a software engineer and researcher with expertise spanning AI/ML, distributed systems, and web development. Currently, I'm working as a Software Engineer at Monsha.AI, where I'm building an AI-powered EdTech platform that creates teaching resources and materials for educators using agentic LLM workflows.
 
-At xlab, I'm developing a benchmark framework to evaluate how AI agents handle realistic system failures. Meanwhile, at LUCID Lab, I'm working on using LLMs to generalize logs from different sources. I'm also actively working on two other projects, generating UI test scripts from natural language test cases and developing conversational agents that help educators create pedagogically relevant slides.
+My research interests focus on **operating systems**, **systems reliability**, and **distributed systems**. I'm currently working as a research intern at [Professor Tianyin Xu's](https://tianyin.github.io/) lab at UIUC, developing a benchmark framework for evaluating the ability of AI agents to detect, localize, and mitigate realistic failures in cloud-native environments. I'm also collaborating with [Professor Ashrafi's](https://scholar.google.com/citations?user=lPz7L8kAAAAJ&hl=en) lab at Towson University on using LLMs to generalize logs from different sources. Previously, I worked with [Professor Anindya Iqbal](https://scholar.google.com/citations?user=jAuiNFgAAAAJ&hl=en) at BUET on agentic frameworks for automated test generation and pedagogical conversational agents.
 
+Currently, I am looking for a Ph.D. position for fall 2026.
