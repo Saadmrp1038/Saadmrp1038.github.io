@@ -1,8 +1,7 @@
 <script>
-	import profilePic from '$lib/assets/profile.jpeg';
+	import profilePic from '$lib/assets/profile-2.jpg';
 	import SocialLink from '$lib/components/SocialLink.svelte';
 	import ResearchTag from '$lib/components/ResearchTag.svelte';
-	import WorkCard from '$lib/components/WorkCard.svelte';
 	import NewsItem from '$lib/components/NewsItem.svelte';
 
 	const socialLinks = [
@@ -31,21 +30,6 @@
 
 	const researchInterests = ['AI4SE', 'Software Engineering', 'Cloud Systems', 'Fault Injection'];
 
-	const currentWork = [
-		{
-			title: 'Benchmarking AI Agents for Cloud Failures',
-			description:
-				"Building a benchmark framework to evaluate AI agents' ability to detect and mitigate failures in cloud environments.",
-			location: '@ UIUC'
-		},
-		{
-			title: 'AI-Powered EdTech Platform',
-			description:
-				'Building teaching resource generation tools using agentic LLM workflows with quality assurance mechanisms.',
-			location: '@ Monsha.AI'
-		}
-	];
-
 	const newsItems = [
 		{
 			date: 'Jul 2025',
@@ -73,106 +57,95 @@
 </script>
 
 <main class="min-h-screen bg-white dark:bg-slate-900">
-	<div class="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-12 md:py-20">
-		<!-- Hero Section -->
-		<div class="mb-12 sm:mb-16">
-			<div class="mb-8 sm:mb-10 flex flex-col items-start gap-6 sm:gap-8 sm:flex-row">
-				<div class="relative mx-auto sm:mx-0">
-					<img
-						src={profilePic}
-						alt="Saad Mohammad Rafid Pial"
-						class="h-28 w-28 sm:h-36 sm:w-36 rounded-full border-2 border-gray-200 object-cover shadow-sm dark:border-slate-700"
-					/>
-				</div>
-				<div class="flex-1 w-full text-center sm:text-left">
-					<h1
-						class="mb-3 text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-100"
-					>
-						Saad Mohammad Rafid Pial
-					</h1>
-					<p class="mb-6 text-base sm:text-lg leading-relaxed text-gray-600 dark:text-slate-400">
-						Final year Computer Science student at BUET · Research Intern at UIUC · Software
-						Engineer at Monsha.AI
-					</p>
-					<div class="flex flex-wrap gap-2 sm:gap-3 justify-center sm:justify-start">
-						{#each socialLinks as link}
-							<SocialLink
-								href={link.href}
-								label={link.label}
-								icon={link.icon}
-								external={link.external}
-							/>
-						{/each}
+	<div class="mx-auto max-w-6xl px-4 sm:px-6 py-8 sm:py-12 md:py-20">
+		<div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+			<!-- Left Column: Profile Image, Title, and Social Links -->
+			<div class="lg:w-1/3 shrink-0">
+				<div>
+					<div class="mb-6 flex justify-center lg:justify-start">
+						<img
+							src={profilePic}
+							alt="Saad Mohammad Rafid Pial"
+							class="h-48 w-48 sm:h-56 sm:w-56 rounded-full border-2 border-gray-200 object-cover shadow-sm dark:border-slate-700"
+						/>
+					</div>
+					<div class="text-center lg:text-left">
+						<h1
+							class="mb-3 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100"
+						>
+							Saad Mohammad Rafid Pial
+						</h1>
+						<p class="mb-6 text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400">
+							Recent graduate from BUET · Research Intern at UIUC · Software Engineer at Monsha.AI
+						</p>
+						<div class="flex flex-row lg:flex-col gap-2 items-center lg:items-start">
+							{#each socialLinks as link}
+								<SocialLink
+									href={link.href}
+									label={link.label}
+									icon={link.icon}
+									external={link.external}
+								/>
+							{/each}
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="mb-12 sm:mb-16">
-				<h2
-					class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
-				>
-					About Me
-				</h2>
-				<div class="prose max-w-none prose-gray dark:prose-invert">
-					<p class="mb-6 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300">
-						I'm a final-year Computer Science student at Bangladesh University of Engineering and
-						Technology (BUET), expected to graduate in March 2025. Currently, I work as a Software
-						Engineer at Monsha.AI, building AI-powered educational tools, and as a Research Intern
-						at University of Illinois Urbana-Champaign under Professor Tianyin Xu.
-					</p>
+
+			<!-- Right Column: About Me, Research Interests, News and Updates -->
+			<div class="lg:w-2/3 flex-1">
+				<!-- About Me -->
+				<div class="mb-12 sm:mb-16">
+					<h2
+						class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
+					>
+						About Me
+					</h2>
+					<div class="prose max-w-none prose-gray dark:prose-invert">
+						<p class="mb-0 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300">
+							Hi, I'm Pial. I recently graduated from the Department of Computer Science and Engineering at the Bangladesh University of Engineering and Technology (BUET). I'm currently a research intern at Professor Tianyin Xu's lab at UIUC, working on AI-driven tools to improve reliability and security in real-world software systems. My work bridges academic research and industry experience, having built scalable systems at both small and mid-level startups.
+						</p>
+					</div>
 				</div>
-			</div>
-		</div>
 
-		<!-- Research Interests -->
-		<div class="mb-12 sm:mb-16">
-			<h2
-				class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
-			>
-				Research Interests
-			</h2>
+				<!-- Research Interests -->
+				<div class="mb-12 sm:mb-16">
+					<h2
+						class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
+					>
+						Research Interests
+					</h2>
 
-			<div class="flex flex-wrap gap-2">
-				{#each researchInterests as interest}
-					<ResearchTag label={interest} />
-				{/each}
-			</div>
-			<div class="prose mt-4 sm:mt-6 max-w-none prose-gray dark:prose-invert">
-				<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300">
-					My research focuses on leveraging artificial intelligence to improve software reliability
-					and development practices. I'm particularly interested in developing AI agents that can
-					autonomously test software systems, detect failures in cloud environments, and automate
-					complex web-based workflows. My work spans the intersection of machine learning and
-					software engineering, with a special emphasis on fault injection techniques and cloud
-					system reliability.
-				</p>
-			</div>
-		</div>
+					<div class="flex flex-wrap gap-2">
+						{#each researchInterests as interest}
+							<ResearchTag label={interest} />
+						{/each}
+					</div>
+					<div class="prose mt-4 sm:mt-6 max-w-none prose-gray dark:prose-invert">
+						<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300">
+							My research focuses on leveraging artificial intelligence to improve software reliability
+							and development practices. I'm particularly interested in developing AI agents that can
+							autonomously test software systems, detect failures in cloud environments, and automate
+							complex web-based workflows. My work spans the intersection of machine learning and
+							software engineering, with a special emphasis on fault injection techniques and cloud
+							system reliability.
+						</p>
+					</div>
+				</div>
 
-		<!-- Current Work -->
-		<div class="mb-12 sm:mb-16">
-			<h2
-				class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
-			>
-				What I'm Working On
-			</h2>
-			<div class="space-y-3 sm:space-y-4">
-				{#each currentWork as work}
-					<WorkCard title={work.title} description={work.description} location={work.location} />
-				{/each}
-			</div>
-		</div>
-
-		<!-- News and Updates -->
-		<div>
-			<h2
-				class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
-			>
-				News and Updates
-			</h2>
-			<div class="space-y-3 sm:space-y-4">
-				{#each newsItems as news}
-					<NewsItem date={news.date} description={news.description} />
-				{/each}
+				<!-- News and Updates -->
+				<div>
+					<h2
+						class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
+					>
+						News and Updates
+					</h2>
+					<div class="space-y-3 sm:space-y-4">
+						{#each newsItems as news}
+							<NewsItem date={news.date} description={news.description} />
+						{/each}
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
