@@ -4,3 +4,17 @@
 
 /* Dark mode configuration for Tailwind v4 */
 @variant dark (&:where(.dark, .dark *));
+
+/* Mobile optimization */
+@media (hover: none) and (pointer: coarse) {
+	/* Improve touch interactions on mobile devices */
+	* {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+	}
+	
+	/* Better text rendering on mobile */
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}

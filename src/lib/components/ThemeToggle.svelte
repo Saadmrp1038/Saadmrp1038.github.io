@@ -11,7 +11,7 @@
 <button
 	type="button"
 	onclick={toggleTheme}
-	class="p-2 {variant === 'mobile' ? '' : '-mr-2'} text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 transition-colors duration-200"
+	class="p-2.5 {variant === 'mobile' ? 'rounded-md active:bg-gray-100 dark:active:bg-slate-800' : '-mr-2'} text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 transition-all duration-200 touch-manipulation"
 	aria-label="Toggle theme"
 >
 	{#if $theme === 'dark'}

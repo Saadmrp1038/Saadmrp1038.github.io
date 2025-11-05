@@ -18,7 +18,7 @@
 {:else}
 	<a
 		{href}
-		class="block hover:translate-x-1 transition-all duration-200 {isActive() ? 'text-gray-900 dark:text-slate-100 font-medium' : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100'}"
+		class="block py-2.5 px-1 -mx-1 rounded-md active:bg-gray-100 dark:active:bg-slate-800 hover:translate-x-1 transition-all duration-200 touch-manipulation {isActive() ? 'text-gray-900 dark:text-slate-100 font-medium' : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100'}"
 	>
 		{label}
 	</a>
