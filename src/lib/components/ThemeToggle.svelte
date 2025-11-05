@@ -6,15 +6,13 @@
 	function toggleTheme() {
 		theme.toggle();
 	}
-
-	$: themeLabel = $theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
 </script>
 
 <button
 	type="button"
 	onclick={toggleTheme}
-	class="p-2 {variant === 'mobile' ? '' : '-mr-2'} text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:dark:ring-slate-100 focus:ring-offset-2 focus:dark:ring-offset-slate-900 rounded"
-	aria-label={themeLabel}
+	class="p-2 {variant === 'mobile' ? '' : '-mr-2'} text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 transition-colors duration-200"
+	aria-label="Toggle theme"
 >
 	{#if $theme === 'dark'}
 		<!-- Sun icon for light mode -->

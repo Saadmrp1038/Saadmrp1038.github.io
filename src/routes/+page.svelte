@@ -72,7 +72,7 @@
 	];
 </script>
 
-<main id="main-content" class="min-h-screen bg-white dark:bg-slate-900">
+<main class="min-h-screen bg-white dark:bg-slate-900">
 	<div class="mx-auto max-w-4xl px-6 py-12 md:py-20">
 		<!-- Hero Section -->
 		<div class="mb-16">
@@ -82,8 +82,6 @@
 						src={profilePic}
 						alt="Saad Mohammad Rafid Pial"
 						class="h-36 w-36 rounded-full border-2 border-gray-200 object-cover shadow-sm dark:border-slate-700"
-						width="144"
-						height="144"
 					/>
 				</div>
 				<div class="flex-1">
@@ -133,13 +131,11 @@
 				Research Interests
 			</h2>
 
-			<ul class="flex flex-wrap gap-2 list-none" role="list">
+			<div class="flex flex-wrap gap-2">
 				{#each researchInterests as interest}
-					<li>
-						<ResearchTag label={interest} />
-					</li>
+					<ResearchTag label={interest} />
 				{/each}
-			</ul>
+			</div>
 			<div class="prose mt-6 max-w-none prose-gray dark:prose-invert">
 				<p class="mb-4 text-base leading-relaxed text-gray-700 dark:text-slate-300">
 					My research focuses on leveraging artificial intelligence to improve software reliability
