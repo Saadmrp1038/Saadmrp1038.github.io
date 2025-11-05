@@ -70,15 +70,15 @@
 						/>
 					</div>
 					<div class="text-center lg:text-left">
-						<h1
+						<!-- <h1
 							class="mb-3 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100"
 						>
 							Saad Mohammad Rafid Pial
-						</h1>
+						</h1> -->
 						<p class="mb-6 text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400">
 							Recent graduate from BUET · Research Intern at UIUC · Software Engineer at Monsha.AI
 						</p>
-						<div class="flex flex-row lg:flex-col gap-2 items-center lg:items-start">
+						<div class="flex flex-row lg:flex-col gap-4 lg:gap-2 justify-center lg:items-start">
 							{#each socialLinks as link}
 								<SocialLink
 									href={link.href}
@@ -95,7 +95,7 @@
 			<!-- Right Column: About Me, Research Interests, News and Updates -->
 			<div class="lg:w-2/3 flex-1">
 				<!-- About Me -->
-				<div class="mb-12 sm:mb-16">
+				<div class="mb-8 sm:mb-10">
 					<h2
 						class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
 					>
@@ -109,7 +109,7 @@
 				</div>
 
 				<!-- Research Interests -->
-				<div class="mb-12 sm:mb-16">
+				<div class="mb-8 sm:mb-10">
 					<h2
 						class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
 					>
