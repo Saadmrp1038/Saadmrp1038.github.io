@@ -1,0 +1,138 @@
+<script>
+	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
+	import uiucLogo from '$lib/assets/logos/uiuc.png';
+	import buetLogo from '$lib/assets/logos/buet.png';
+	import monshaLogo from '$lib/assets/logos/monsha.png';
+	import zelfLogo from '$lib/assets/logos/zelf.png';
+	import oleynLogo from '$lib/assets/logos/oleyn.webp';
+	import priyoLogo from '$lib/assets/logos/priyo.jpeg';
+
+	const researchExperiences = [
+		{
+			title: 'Remote Research Intern',
+			organization: "Professor Tianyin Xu's Lab",
+			organizationUrl: 'https://tianyin.github.io/',
+			location: 'University of Illinois Urbana-Champaign',
+			dateRange: 'May 2025 – Present',
+			description:
+				'Developing a benchmark framework to systematically evaluate AI agents\' ability to detect, localize, and mitigate realistic failures in cloud-native environments. Working on low-level fault injection modules using eBPF to simulate OS and hardware-level failures, expanding Kubernetes misconfiguration libraries, and modernizing legacy microservice benchmarks. Built a CloudLab provisioner for push-button, multi-node deployment.',
+			type: 'research',
+			logo: uiucLogo
+		},
+		{
+			title: 'Research Collaborator',
+			organization: "Professor Anindya Iqbal's Lab",
+			organizationUrl: 'https://scholar.google.com/citations?user=jAuiNFgAAAAJ&hl=en',
+			location: 'BUET',
+			dateRange: 'May 2025 – Sep 2025',
+			description:
+				'Designed and developed a novel agentic framework that autonomously translates natural language test specifications for web UIs into executable Playwright scripts. Implemented the core translation algorithm converting web agent interaction traces into structured test scripts, with evaluations demonstrating competitive performance against industry-standard tools. Co-first authored a paper under review at FSE 2026.',
+			type: 'research',
+			logo: buetLogo
+		},
+		{
+			title: 'Undergraduate Researcher',
+			organization: "Professor Anindya Iqbal's Lab",
+			organizationUrl: 'https://scholar.google.com/citations?user=jAuiNFgAAAAJ&hl=en',
+			location: 'BUET',
+			dateRange: 'Jul 2024 – May 2025',
+			description:
+				'Developed NuevAI, a semi-autonomous system for creating Pedagogical Conversational Agents. Designed and conducted comprehensive evaluations to assess system effectiveness, resulting in a second-authored paper accepted at the 16th Biannual CHItaly 2025.',
+			type: 'research',
+			logo: buetLogo
+		}
+	];
+
+	const workExperiences = [
+		{
+			title: 'Software Engineer (Remote)',
+			organization: 'Monsha.AI',
+			location: 'US based',
+			dateRange: 'Jul 2025 – Present',
+			description:
+				'Building an AI-powered EdTech platform that creates teaching resources and materials for educators. Developing agentic LLM workflows to address diverse educational needs, enabling dynamic resource creation with integrated quality assurance mechanisms.',
+			type: 'work',
+			logo: monshaLogo
+		},
+		{
+			title: 'Software Engineer (Remote)',
+			organization: 'Zelf AI',
+			location: 'US based',
+			dateRange: 'Nov 2024 – Jun 2025',
+			description:
+				'Developed large-scale scraping infrastructure for Instagram and TikTok, implementing advanced anti-bot detection countermeasures including distributed token management, device fingerprinting, and TLS fingerprint spoofing. Re-engineered TikTok scraping to use stand-alone cryptographic signing, significantly improving performance and reducing system complexity.',
+			type: 'work',
+			logo: zelfLogo
+		},
+		{
+			title: 'Software Engineer (Remote)',
+			organization: 'Oleyn',
+			location: 'Singapore based',
+			dateRange: 'Jul 2024 – Feb 2025',
+			description:
+				'Designed and implemented core FastAPI backend with 50+ database tables supporting multi-channel communication across Messenger, Instagram, Telegram, and WhatsApp. Built custom WhatsApp automation server, developed RAG systems for context-aware AI responses, and implemented bulk messaging infrastructure supporting campaigns to 1,000+ recipients with automated analytics.',
+			type: 'work',
+			logo: oleynLogo
+		},
+		{
+			title: 'Part-time Software Engineer',
+			organization: 'Priyo',
+			location: 'Bangladesh based',
+			dateRange: 'Jul 2024 – Nov 2024',
+			description:
+				'Designed backend architecture for PriyoPay chatbot system with automated web scraping and comprehensive admin/client functionality. Developed Flutter mobile app with complete onboarding flow, dashboard, and card management. Integrated third-party services including Persona verification and MarqetaJS for secure financial operations.',
+			type: 'work',
+			logo: priyoLogo
+		}
+	];
+</script>
+
+<main class="min-h-screen bg-white dark:bg-slate-900">
+	<div class="mx-auto max-w-6xl px-4 sm:px-6 py-8 sm:py-12 md:py-20">
+		<!-- Research Experience Section -->
+		<div class="mb-12 sm:mb-16">
+			<h1
+				class="mb-8 sm:mb-10 border-b border-gray-200 pb-3 text-2xl sm:text-3xl font-bold text-gray-900 dark:border-slate-700 dark:text-slate-100"
+			>
+				Research Experience
+			</h1>
+			<div class="space-y-4 sm:space-y-6">
+				{#each researchExperiences as experience}
+					<ExperienceCard
+						title={experience.title}
+						organization={experience.organization}
+						organizationUrl={experience.organizationUrl}
+						location={experience.location}
+						dateRange={experience.dateRange}
+						description={experience.description}
+						type={experience.type}
+						logo={experience.logo}
+					/>
+				{/each}
+			</div>
+		</div>
+
+		<!-- Work Experience Section -->
+		<div>
+			<h1
+				class="mb-8 sm:mb-10 border-b border-gray-200 pb-3 text-2xl sm:text-3xl font-bold text-gray-900 dark:border-slate-700 dark:text-slate-100"
+			>
+				Work Experience
+			</h1>
+			<div class="space-y-4 sm:space-y-6">
+				{#each workExperiences as experience}
+					<ExperienceCard
+						title={experience.title}
+						organization={experience.organization}
+						location={experience.location}
+						dateRange={experience.dateRange}
+						description={experience.description}
+						type={experience.type}
+						logo={experience.logo}
+					/>
+				{/each}
+			</div>
+		</div>
+	</div>
+</main>
+

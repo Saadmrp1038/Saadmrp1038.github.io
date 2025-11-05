@@ -1,7 +1,6 @@
 <script>
 	import profilePic from '$lib/assets/profile-2.jpg';
 	import SocialLink from '$lib/components/SocialLink.svelte';
-	import ResearchTag from '$lib/components/ResearchTag.svelte';
 	import NewsItem from '$lib/components/NewsItem.svelte';
 
 	const socialLinks = [
@@ -27,8 +26,6 @@
 			icon: '<svg class="h-4 w-4" fill="#4285f4" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" /></svg>'
 		}
 	];
-
-	const researchInterests = ['AI4SE', 'Software Engineering', 'Cloud Systems', 'Fault Injection'];
 
 	const newsItems = [
 		{
@@ -104,31 +101,6 @@
 					<div class="prose max-w-none prose-gray dark:prose-invert">
 						<p class="mb-0 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300">
 							Hi, I'm Pial. I recently graduated from the Department of Computer Science and Engineering at the Bangladesh University of Engineering and Technology (BUET). I'm currently a research intern at Professor Tianyin Xu's lab at UIUC, working on AI-driven tools to improve reliability and security in real-world software systems. My work bridges academic research and industry experience, having built scalable systems at both small and mid-level startups.
-						</p>
-					</div>
-				</div>
-
-				<!-- Research Interests -->
-				<div class="mb-8 sm:mb-10">
-					<h2
-						class="mb-4 sm:mb-6 border-b border-gray-200 pb-2 text-xl sm:text-2xl font-semibold text-gray-900 dark:border-slate-700 dark:text-slate-100"
-					>
-						Research Interests
-					</h2>
-
-					<div class="flex flex-wrap gap-2">
-						{#each researchInterests as interest}
-							<ResearchTag label={interest} />
-						{/each}
-					</div>
-					<div class="prose mt-4 sm:mt-6 max-w-none prose-gray dark:prose-invert">
-						<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300">
-							My research focuses on leveraging artificial intelligence to improve software reliability
-							and development practices. I'm particularly interested in developing AI agents that can
-							autonomously test software systems, detect failures in cloud environments, and automate
-							complex web-based workflows. My work spans the intersection of machine learning and
-							software engineering, with a special emphasis on fault injection techniques and cloud
-							system reliability.
 						</p>
 					</div>
 				</div>
