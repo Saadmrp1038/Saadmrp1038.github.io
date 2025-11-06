@@ -1,41 +1,61 @@
 <script>
-	let { title, authors, venue, year, links = {} } = $props();
+	let { title, authors, venue, year, links = {}, abstract } = $props();
+	let expanded = $state(false);
 </script>
 
 <div
-	class="rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 sm:p-6 transition-colors duration-200 hover:border-gray-300 dark:hover:border-slate-600"
+	class="rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-2.5 sm:p-4 transition-colors duration-200 hover:border-gray-300 dark:hover:border-slate-600"
 >
-	<div class="mb-3">
-		<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-2">
-			{title}
-		</h3>
-		<div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 text-sm text-gray-600 dark:text-slate-400">
+	<div>
+		{#if abstract}
+			<button
+				type="button"
+				onclick={() => (expanded = !expanded)}
+				class="w-full text-left group"
+			>
+				<h3 class="text-sm sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1.5 sm:mb-2 leading-tight sm:leading-normal group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:underline transition-colors cursor-pointer">
+					{title}
+				</h3>
+			</button>
+		{:else}
+			<h3 class="text-sm sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1.5 sm:mb-2 leading-tight sm:leading-normal">
+				{title}
+			</h3>
+		{/if}
+		<div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-600 dark:text-slate-400">
 			{#if authors}
-				<span>{authors}</span>
+				<span class="font-medium">{authors}</span>
 			{/if}
 			{#if venue}
-				<span class="hidden sm:inline">·</span>
+				<span class="text-gray-400 dark:text-slate-500">·</span>
 				<span class="italic">{venue}</span>
 			{/if}
 			{#if year}
-				<span class="hidden sm:inline">·</span>
+				<span class="text-gray-400 dark:text-slate-500">·</span>
 				<span>{year}</span>
 			{/if}
-		</div>
-	</div>
-	{#if Object.keys(links).length > 0}
-		<div class="flex flex-wrap gap-2 mt-3">
-			{#each Object.entries(links) as [label, url]}
+			{#if links.PDF}
+				<span class="text-gray-400 dark:text-slate-500">·</span>
 				<a
-					href={url}
+					href={links.PDF}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-xs sm:text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-colors"
+					class="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
 				>
-					{label}
+					<svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+					</svg>
+					<span>PDF</span>
 				</a>
-			{/each}
+			{/if}
 		</div>
-	{/if}
+		{#if abstract && expanded}
+			<div class="mt-2 pt-2 border-t border-gray-200 dark:border-slate-700">
+				<div class="text-xs sm:text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+					{abstract}
+				</div>
+			</div>
+		{/if}
+	</div>
 </div>
 
