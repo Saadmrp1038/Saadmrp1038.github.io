@@ -11,20 +11,8 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/custom-portfolio' : ''
-		},
 		prerender: {
-			entries: ['*'],
-			handleHttpError: ({ path, status }) => {
-				// During prerendering with base path, 404s can occur due to base path mismatches
-				// These will be resolved at runtime, so we allow them during build
-				if (status === 404) {
-					return;
-				}
-				// For other errors, fail the build
-				throw new Error(`Failed to prerender ${path}: ${status}`);
-			}
+			entries: ['*']
 		}
 	},
 	preprocess: [mdsvex()],
