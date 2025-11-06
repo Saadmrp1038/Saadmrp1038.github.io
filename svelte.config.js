@@ -15,7 +15,14 @@ const config = {
 			base: process.env.NODE_ENV === 'production' ? '/custom-portfolio' : ''
 		},
 		prerender: {
-			entries: ['*']
+			entries: ['*'],
+			handleHttpError: ({ path }) => {
+				// Ignore 404 errors for root path during prerendering with base path
+				if (path === '/') {
+					return;
+				}
+				throw new Error(`Failed to prerender ${path}`);
+			}
 		}
 	},
 	preprocess: [mdsvex()],
