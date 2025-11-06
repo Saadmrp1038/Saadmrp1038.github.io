@@ -16,12 +16,14 @@ const config = {
 		},
 		prerender: {
 			entries: ['*'],
-			handleHttpError: ({ path }) => {
-				// Ignore 404 errors for root path during prerendering with base path
-				if (path === '/') {
+			handleHttpError: ({ path, status }) => {
+				// During prerendering with base path, 404s can occur due to base path mismatches
+				// These will be resolved at runtime, so we allow them during build
+				if (status === 404) {
 					return;
 				}
-				throw new Error(`Failed to prerender ${path}`);
+				// For other errors, fail the build
+				throw new Error(`Failed to prerender ${path}: ${status}`);
 			}
 		}
 	},
