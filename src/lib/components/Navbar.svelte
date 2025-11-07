@@ -9,8 +9,8 @@
 		{ href: '/', label: 'About' },
 		{ href: '/publications', label: 'Publications' },
 		{ href: '/experience', label: 'Experience' },
-		{ href: '/projects', label: 'Projects' },
-		{ href: '/contact', label: 'Contact' }
+		// { href: '/projects', label: 'Projects' },
+		// { href: '/contact', label: 'Contact' }
 	];
 	
 	if (typeof window !== 'undefined') {
