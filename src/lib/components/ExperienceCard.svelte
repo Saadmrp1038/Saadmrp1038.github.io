@@ -52,7 +52,7 @@
 	</div>
 	{#if description}
 		<p class="text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400 mt-3">
-			{description}
+			{@html description}
 		</p>
 	{/if}
 </div>

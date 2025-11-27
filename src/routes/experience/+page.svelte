@@ -15,7 +15,7 @@
 			location: 'University of Illinois Urbana-Champaign',
 			dateRange: 'May 2025 – Present',
 			description:
-				'Developing a benchmark framework to systematically evaluate AI agents\' ability to detect, localize, and mitigate realistic failures in cloud-native environments. Working on low-level fault injection modules using eBPF to simulate OS and hardware-level failures, expanding Kubernetes misconfiguration libraries, and modernizing legacy microservice benchmarks. Built a CloudLab provisioner for push-button, multi-node deployment.',
+				'Developing SREGym, UIUC’s AI-native benchmark framework for evaluating SRE agents, to systematically assess detection, localization, and mitigation of realistic cloud-native failures. My work here included developing low-level fault injection modules to simulate OS and hardware-level failures, expanding Kubernetes misconfiguration libraries, modernizing legacy microservice benchmarks. Currently serving as a core contributor to the project (<a class="text-blue-600 dark:text-sky-400 font-medium hover:underline" href="https://github.com/SREGym/SREGym" target="_blank" rel="noopener noreferrer">SREGym</a>).',
 			type: 'research',
 			logo: uiucLogo
 		},
