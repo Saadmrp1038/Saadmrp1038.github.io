@@ -2,6 +2,42 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+/* Ananda Black Font */
+@font-face {
+	font-family: 'Ananda Black';
+	src: url('/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Feelfree Font */
+@font-face {
+	font-family: 'Feelfree';
+	src: url('/fonts/FeelfreePersonalUseRegular-lg2Bw.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Autumn Flowers Font */
+@font-face {
+	font-family: 'Autumn Flowers';
+	src: url('/fonts/AutumnFlowers-9YVZK.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Kingsman Font */
+@font-face {
+	font-family: 'Kingsman';
+	src: url('/fonts/KingsmanDemo-1GVgg.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 /* Dark mode configuration for Tailwind v4 */
 @variant dark (&:where(.dark, .dark *));
 
