@@ -13,12 +13,12 @@
 				onclick={() => (expanded = !expanded)}
 				class="w-full text-left group"
 			>
-				<h3 class="text-sm sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1.5 sm:mb-2 leading-tight sm:leading-normal group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:underline transition-colors cursor-pointer">
+				<h3 class="text-sm sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1.5 sm:mb-2 leading-tight sm:leading-normal group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:underline transition-colors cursor-pointer" style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;">
 					{title}
 				</h3>
 			</button>
 		{:else}
-			<h3 class="text-sm sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1.5 sm:mb-2 leading-tight sm:leading-normal">
+			<h3 class="text-sm sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1.5 sm:mb-2 leading-tight sm:leading-normal" style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;">
 				{title}
 			</h3>
 		{/if}
@@ -32,7 +32,7 @@
 			{/if}
 			{#if year}
 				<span class="text-gray-400 dark:text-slate-500">·</span>
-				<span>{year}</span>
+				<span style="font-family: 'JetBrains Mono', 'Fira Code', monospace; font-feature-settings: 'liga' 1, 'calt' 1;">{year}</span>
 			{/if}
 			{#if links.PDF}
 				<span class="text-gray-400 dark:text-slate-500">·</span>
@@ -51,7 +51,7 @@
 		</div>
 		{#if abstract && expanded}
 			<div class="mt-2 pt-2 border-t border-gray-200 dark:border-slate-700">
-				<div class="text-xs sm:text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+				<div class="text-xs sm:text-sm text-gray-700 dark:text-slate-300 leading-relaxed" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
 					{abstract}
 				</div>
 			</div>

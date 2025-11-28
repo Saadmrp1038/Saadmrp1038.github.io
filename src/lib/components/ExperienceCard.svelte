@@ -17,7 +17,7 @@
 		{/if}
 		<div class="flex-1 flex flex-col gap-2 sm:gap-3 sm:flex-row sm:items-start sm:justify-between min-w-0">
 			<div class="flex-1 min-w-0">
-				<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1">
+				<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1" style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;">
 					{title}
 				</h3>
 				<div class="flex flex-row items-baseline gap-1 sm:gap-2 text-sm text-gray-600 dark:text-slate-400">
@@ -44,6 +44,7 @@
 			{#if dateRange}
 				<span
 					class="inline-flex shrink-0 w-fit items-center rounded-full border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-700 px-2.5 sm:px-3 py-1 text-xs font-medium text-gray-600 dark:text-slate-300 self-start"
+					style="font-family: 'JetBrains Mono', 'Fira Code', monospace; font-feature-settings: 'liga' 1, 'calt' 1;"
 				>
 					{dateRange}
 				</span>
@@ -51,7 +52,7 @@
 		</div>
 	</div>
 	{#if description}
-		<p class="text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400 mt-3">
+		<p class="text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400 mt-3" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
 			{@html description}
 		</p>
 	{/if}

@@ -172,6 +172,7 @@
 		<div class="mb-12 sm:mb-16">
 			<h1
 				class="mb-8 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900 sm:mb-10 sm:text-3xl dark:border-slate-700 dark:text-slate-100"
+				style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;"
 			>
 				Research Experience
 			</h1>
@@ -195,6 +196,7 @@
 		<div>
 			<h1
 				class="mb-8 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900 sm:mb-10 sm:text-3xl dark:border-slate-700 dark:text-slate-100"
+				style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;"
 			>
 				Work Experience
 			</h1>

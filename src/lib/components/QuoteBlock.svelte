@@ -3,11 +3,11 @@
 </script>
 
 <div class="my-4">
-	<blockquote class="border-l-4 border-gray-300 dark:border-slate-600 pl-4 italic text-sm sm:text-base text-gray-600 dark:text-slate-400">
+	<blockquote class="border-l-4 border-gray-300 dark:border-slate-600 pl-4 text-sm sm:text-base text-gray-600 dark:text-slate-400" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
 		<p class="mb-2">
 			{quote}
 		</p>
-		<footer class="not-italic text-xs text-gray-500 dark:text-slate-500 flex items-center gap-2">
+		<footer class="text-xs text-gray-500 dark:text-slate-500 flex items-center gap-2" style="font-family: 'Inter', sans-serif;">
 			<span>— {author}</span>
 			{#if imageUrl}
 				<button

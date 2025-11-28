@@ -29,10 +29,10 @@
 		<div class="flex items-center justify-between gap-4">
 			<!-- Name with better typography and mobile truncation -->
 			<a href="/" class="group min-w-0 flex-1">
-				<h1 class="text-xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-slate-100 group-hover:text-gray-600 dark:group-hover:text-slate-300 transition-colors duration-200 truncate" style="font-family: 'Kingsman', sans-serif;">
+				<p class="text-xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-slate-100 group-hover:text-gray-600 dark:group-hover:text-slate-300 transition-colors duration-200 truncate" style="font-family: 'Kingsman', sans-serif;">
 					<span class="hidden sm:inline">Saad Mohammad Rafid Pial</span>
 					<span class="sm:hidden">S. M. R. Pial</span>
-				</h1>
+				</p>
 			</a>
 
 			<!-- Desktop Navigation with underline effect -->

@@ -34,7 +34,7 @@
 						/>
 					</div>
 					<div class="text-center lg:text-left">
-						<p class="mb-6 text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400">
+						<p class="mb-6 text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
 							{BIO_TEXT.short}
 						</p>
 						<div class="flex flex-row lg:flex-col gap-4 lg:gap-2 justify-center lg:items-start">
@@ -57,7 +57,7 @@
 				<div class="mb-8 sm:mb-10">
 					<SectionHeading title="About Me" />
 					<div class="prose max-w-none prose-gray dark:prose-invert">
-						<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300">
+						<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
 							{BIO_TEXT.full}
 						</p>
 						<QuoteBlock quote={COURAGE_QUOTE.text} author={COURAGE_QUOTE.author} imageUrl={courageImage} />
@@ -74,7 +74,7 @@
 						{/each}
 					</div>
 					<div class="prose mt-4 sm:mt-6 max-w-none prose-gray dark:prose-invert">
-						<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300">
+						<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
 							{RESEARCH_DESCRIPTION}
 						</p>
 					</div>

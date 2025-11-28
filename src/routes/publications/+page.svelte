@@ -32,6 +32,7 @@
 	<div class="mx-auto max-w-6xl px-3 sm:px-6 py-4 sm:py-8 md:py-12">
 		<h1
 			class="mb-4 sm:mb-8 border-b border-gray-200 pb-1.5 sm:pb-2 text-xl sm:text-3xl font-bold text-gray-900 dark:border-slate-700 dark:text-slate-100"
+			style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;"
 		>
 			Publications
 		</h1>
