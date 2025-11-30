@@ -3,16 +3,17 @@
 </script>
 
 <div
-	class="rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 sm:p-6 transition-colors duration-200 hover:border-gray-300 dark:hover:border-slate-600"
+	class="glass-panel p-4 sm:p-6"
 >
 	<div class="mb-3 flex flex-col gap-2 sm:gap-3 sm:flex-row sm:items-start sm:justify-between">
-		<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-slate-100">{title}</h3>
+		<h3 class="text-base sm:text-lg font-semibold" style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary);">{title}</h3>
 		<span
-			class="inline-flex shrink-0 items-center rounded-full border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-700 px-2.5 sm:px-3 py-1 text-xs font-medium text-gray-600 dark:text-slate-300"
+			class="inline-flex shrink-0 items-center rounded-full px-2.5 sm:px-3 py-1 text-xs font-medium"
+			style="font-family: 'JetBrains Mono', 'Fira Code', monospace; font-weight: 500; font-size: 0.85rem; color: var(--text-muted); background-color: var(--tag-bg); border: 1px solid var(--tag-border);"
 		>
 			{location}
 		</span>
 	</div>
-	<p class="text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400">{description}</p>
+	<p class="text-sm sm:text-base leading-relaxed" style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);">{description}</p>
 </div>
 

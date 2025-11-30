@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 sm:p-6 transition-colors duration-200 hover:border-gray-300 dark:hover:border-slate-600"
+	class="glass-panel p-4 sm:p-6"
 >
 	<div class="mb-3 flex flex-row gap-3 sm:gap-4 items-start">
 		{#if logo}
@@ -17,17 +17,18 @@
 		{/if}
 		<div class="flex-1 flex flex-col gap-2 sm:gap-3 sm:flex-row sm:items-start sm:justify-between min-w-0">
 			<div class="flex-1 min-w-0">
-				<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1" style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;">
+				<h3 class="text-base sm:text-lg font-semibold mb-1" style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary);">
 					{title}
 				</h3>
-				<div class="flex flex-row items-baseline gap-1 sm:gap-2 text-sm text-gray-600 dark:text-slate-400">
+				<div class="flex flex-row items-baseline gap-1 sm:gap-2 text-sm" style="color: var(--text-muted);">
 					{#if organization}
 						{#if organizationUrl}
 							<a
 								href={organizationUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="font-medium hover:text-gray-900 dark:hover:text-slate-200 hover:underline transition-colors"
+								class="font-medium hover:underline transition-colors"
+								style="color: var(--text-muted);"
 							>
 								{organization}
 							</a>
@@ -43,8 +44,8 @@
 			</div>
 			{#if dateRange}
 				<span
-					class="inline-flex shrink-0 w-fit items-center rounded-full border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-700 px-2.5 sm:px-3 py-1 text-xs font-medium text-gray-600 dark:text-slate-300 self-start"
-					style="font-family: 'JetBrains Mono', 'Fira Code', monospace; font-feature-settings: 'liga' 1, 'calt' 1;"
+					class="inline-flex shrink-0 w-fit items-center rounded-full px-2.5 sm:px-3 py-1 text-xs font-medium self-start"
+					style="font-family: 'JetBrains Mono', 'Fira Code', monospace; font-weight: 500; font-size: 0.85rem; font-feature-settings: 'liga' 1, 'calt' 1; color: var(--text-muted); background-color: var(--tag-bg); border: 1px solid var(--tag-border);"
 				>
 					{dateRange}
 				</span>
@@ -52,7 +53,7 @@
 		</div>
 	</div>
 	{#if description}
-		<p class="text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400 mt-3" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
+		<p class="text-sm sm:text-base leading-relaxed mt-3" style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);">
 			{@html description}
 		</p>
 	{/if}

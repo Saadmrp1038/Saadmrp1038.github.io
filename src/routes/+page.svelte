@@ -20,7 +20,7 @@
 	$: socialLinks = getSocialLinks($theme);
 </script>
 
-<main class="min-h-screen bg-white dark:bg-slate-900">
+<main class="min-h-screen" style="background-color: var(--bg-main);">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 py-8 sm:py-12 md:py-20">
 		<div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
 			<!-- Left Column: Profile Image, Title, and Social Links -->
@@ -30,11 +30,12 @@
 						<img
 							src={profilePic}
 							alt="Saad Mohammad Rafid Pial"
-							class="h-48 w-48 sm:h-56 sm:w-56 rounded-full border-2 border-gray-200 object-cover shadow-sm dark:border-slate-700"
+							class="h-48 w-48 sm:h-56 sm:w-56 rounded-full border-2 object-cover shadow-sm glass-panel"
+							style="border-color: var(--border-glass);"
 						/>
 					</div>
 					<div class="text-center lg:text-left">
-						<p class="mb-6 text-sm sm:text-base leading-relaxed text-gray-600 dark:text-slate-400" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
+						<p class="mb-6 text-sm sm:text-base leading-relaxed" style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);">
 							{BIO_TEXT.short}
 						</p>
 						<div class="flex flex-row lg:flex-col gap-4 lg:gap-2 justify-center lg:items-start">
@@ -57,7 +58,7 @@
 				<div class="mb-8 sm:mb-10">
 					<SectionHeading title="About Me" />
 					<div class="prose max-w-none prose-gray dark:prose-invert">
-						<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
+						<p class="mb-4 text-sm sm:text-base leading-relaxed" style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);">
 							{BIO_TEXT.full}
 						</p>
 						<QuoteBlock quote={COURAGE_QUOTE.text} author={COURAGE_QUOTE.author} imageUrl={courageImage} />
@@ -74,7 +75,7 @@
 						{/each}
 					</div>
 					<div class="prose mt-4 sm:mt-6 max-w-none prose-gray dark:prose-invert">
-						<p class="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-slate-300" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
+						<p class="mb-4 text-sm sm:text-base leading-relaxed" style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);">
 							{RESEARCH_DESCRIPTION}
 						</p>
 					</div>

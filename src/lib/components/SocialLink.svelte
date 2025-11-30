@@ -6,7 +6,8 @@
 	{href}
 	target={external ? '_blank' : undefined}
 	rel={external ? 'noopener noreferrer' : undefined}
-	class="group flex items-center gap-1.5 text-gray-700 dark:text-slate-300 transition-all duration-200"
+	class="group flex items-center gap-1.5 transition-all duration-200"
+	style="color: var(--text-primary);"
 >
 	<span>
 		{@html icon}
