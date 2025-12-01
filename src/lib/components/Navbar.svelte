@@ -22,9 +22,13 @@
 	function toggleMenu() {
 		menuOpen = !menuOpen;
 	}
+
+	function closeMenu() {
+		menuOpen = false;
+	}
 </script>
 
-<header class="glass-panel fixed top-0 left-0 right-0 z-50" style="border-radius: 0; border-left: none; border-right: none; border-top: none;">
+<header class="navbar-header fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="border-radius: 0; border-left: none; border-right: none; border-top: none; border-bottom: 1px solid var(--border-glass); box-shadow: var(--shadow-glass);">
 	<nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
 		<div class="flex items-center justify-between gap-4">
 			<!-- Name with better typography and mobile truncation -->
@@ -67,11 +71,23 @@
 
 		<!-- Mobile Navigation with slide effect -->
 		<div class="md:hidden overflow-hidden transition-all duration-300 ease-in-out {menuOpen ? 'max-h-60 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}">
-			<div class="pt-4 space-y-2" style="border-top: 1px solid var(--border-glass);">
+			<div class="pt-4 space-y-2 rounded-b-lg shadow-lg" style="background: var(--bg-main); border-top: 1px solid var(--border-glass);">
 				{#each navItems as item}
-					<NavLink href={item.href} label={item.label} variant="mobile" />
+					<div onclick={closeMenu} role="none">
+						<NavLink href={item.href} label={item.label} variant="mobile" />
+					</div>
 				{/each}
 			</div>
 		</div>
 	</nav>
 </header>
+
+<style>
+	.navbar-header {
+		background: rgba(253, 251, 247, 0.90);
+	}
+
+	:global(.dark) .navbar-header {
+		background: rgba(15, 23, 42, 0.90);
+	}
+</style>
