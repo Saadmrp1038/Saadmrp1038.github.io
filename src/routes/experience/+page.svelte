@@ -166,13 +166,13 @@
 	];
 </script>
 
-<main class="min-h-screen bg-white dark:bg-slate-900">
+<main class="min-h-screen" style="background-color: var(--bg-main);">
 	<div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12 md:py-20">
 		<!-- Research Experience Section -->
 		<div class="mb-12 sm:mb-16">
 			<h1
-				class="mb-8 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900 sm:mb-10 sm:text-3xl dark:border-slate-700 dark:text-slate-100"
-				style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;"
+				class="mb-8 border-b pb-3 text-2xl font-bold sm:mb-10 sm:text-3xl"
+				style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); border-color: var(--border-glass);"
 			>
 				Research Experience
 			</h1>
@@ -195,8 +195,8 @@
 		<!-- Work Experience Section -->
 		<div>
 			<h1
-				class="mb-8 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900 sm:mb-10 sm:text-3xl dark:border-slate-700 dark:text-slate-100"
-				style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;"
+				class="mb-8 border-b pb-3 text-2xl font-bold sm:mb-10 sm:text-3xl"
+				style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); border-color: var(--border-glass);"
 			>
 				Work Experience
 			</h1>

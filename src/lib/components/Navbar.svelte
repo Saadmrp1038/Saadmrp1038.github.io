@@ -24,12 +24,12 @@
 	}
 </script>
 
-<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 transition-shadow duration-300 {scrolled ? 'shadow-sm' : ''} border-b border-gray-200 dark:border-slate-700">
+<header class="glass-panel fixed top-0 left-0 right-0 z-50" style="border-radius: 0; border-left: none; border-right: none; border-top: none;">
 	<nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
 		<div class="flex items-center justify-between gap-4">
 			<!-- Name with better typography and mobile truncation -->
 			<a href="/" class="group min-w-0 flex-1">
-				<p class="text-xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-slate-100 group-hover:text-gray-600 dark:group-hover:text-slate-300 transition-colors duration-200 truncate" style="font-family: 'Kingsman', sans-serif;">
+				<p class="font-medium tracking-tight transition-colors duration-200 truncate" style="font-family: 'Kingsman', cursive; font-size: 2rem; color: var(--text-primary);">
 					<span class="hidden sm:inline">Saad Mohammad Rafid Pial</span>
 					<span class="sm:hidden">S. M. R. Pial</span>
 				</p>
@@ -49,7 +49,8 @@
 				<button
 					type="button"
 					onclick={toggleMenu}
-					class="p-2.5 -mr-1 text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 active:bg-gray-100 dark:active:bg-slate-800 rounded-md transition-all duration-200 touch-manipulation"
+					class="p-2.5 -mr-1 rounded-md transition-all duration-200 touch-manipulation"
+					style="color: var(--text-muted);"
 					aria-label="Menu"
 					aria-expanded={menuOpen}
 				>
@@ -66,7 +67,7 @@
 
 		<!-- Mobile Navigation with slide effect -->
 		<div class="md:hidden overflow-hidden transition-all duration-300 ease-in-out {menuOpen ? 'max-h-60 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}">
-			<div class="pt-4 border-t border-gray-200 dark:border-slate-700 space-y-2">
+			<div class="pt-4 space-y-2" style="border-top: 1px solid var(--border-glass);">
 				{#each navItems as item}
 					<NavLink href={item.href} label={item.label} variant="mobile" />
 				{/each}

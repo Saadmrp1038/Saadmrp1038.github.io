@@ -3,16 +3,20 @@
 </script>
 
 <div class="my-4">
-	<blockquote class="border-l-4 border-gray-300 dark:border-slate-600 pl-4 text-sm sm:text-base text-gray-600 dark:text-slate-400" style="font-family: 'Inter', sans-serif; line-height: 1.6;">
+	<blockquote
+		class="pl-4 text-sm sm:text-base rounded-r-md py-3 pr-3"
+		style="font-family: 'Inter', sans-serif; font-style: italic; line-height: 1.7; border-left: 3px solid var(--accent); background: rgba(217, 119, 6, 0.05); color: var(--text-primary);"
+	>
 		<p class="mb-2">
 			{quote}
 		</p>
-		<footer class="text-xs text-gray-500 dark:text-slate-500 flex items-center gap-2" style="font-family: 'Inter', sans-serif;">
+		<footer class="text-xs flex items-center gap-2 not-italic" style="font-family: 'Inter', sans-serif; color: var(--text-muted);">
 			<span>— {author}</span>
 			{#if imageUrl}
 				<button
 					onclick={() => window.open(imageUrl, '_blank')}
-					class="p-1 text-gray-400 hover:text-gray-600 dark:text-slate-500 dark:hover:text-slate-300 transition-colors"
+					class="p-1 transition-colors"
+					style="color: var(--text-muted);"
 					title="View image"
 					aria-label="Open image in new tab"
 				>
@@ -29,4 +33,10 @@
 		</footer>
 	</blockquote>
 </div>
+
+<style>
+	:global(.dark) blockquote {
+		background: transparent;
+	}
+</style>
 
