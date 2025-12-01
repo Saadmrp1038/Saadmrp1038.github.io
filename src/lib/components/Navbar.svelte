@@ -29,7 +29,7 @@
 		<div class="flex items-center justify-between gap-4">
 			<!-- Name with better typography and mobile truncation -->
 			<a href="/" class="group min-w-0 flex-1">
-				<p class="font-medium tracking-tight transition-colors duration-200 truncate" style="font-family: 'Kingsman', cursive; font-size: 2.5rem; color: var(--text-primary);">
+				<p class="font-medium tracking-tight transition-colors duration-200 truncate" style="font-family: 'Kingsman', cursive; font-size: 2rem; color: var(--text-primary);">
 					<span class="hidden sm:inline">Saad Mohammad Rafid Pial</span>
 					<span class="sm:hidden">S. M. R. Pial</span>
 				</p>
