@@ -147,7 +147,7 @@
 			title: 'Software Engineer (Remote)',
 			organization: 'Oleyn',
 			location: 'Singapore based',
-			dateRange: 'Jul 2024 – Feb 2025',
+			dateRange: 'Jul 2024 – Nov 2025',
 			description:
 				'Built the core FastAPI backend with 50+ database tables supporting multi-channel messaging across Messenger, Instagram, Telegram, and WhatsApp. Developed a custom WhatsApp automation server, RAG-based AI responses, and bulk messaging infrastructure handling campaigns to 1,000+ recipients with automated analytics.',
 			type: 'work',
