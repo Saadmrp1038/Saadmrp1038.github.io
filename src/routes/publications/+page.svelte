@@ -6,10 +6,10 @@
 			title: 'SREGym: A Live Training Ground for AI SRE Agents with High-Fidelity Failure Drills',
 			authors: 'J Clark, Y Su, <span class="font-semibold" style="color: var(--text-primary);">SMR Pial</span>, L Gniedziejko, T Xu',
 			venue: 'ACM CAIS \'26',
-			year: '2025',
+			year: '2026',
 			links: {},
 			abstract:
-				'SREGym is a new benchmark for AI-driven SRE (Site Reliability Engineering) techniques for diagnosing and mitigating production failures. SREGym provides a live training ground where high-fidelity failure drills are emulated through fault injectors. SREGym differs from existing SRE benchmarks such as AIOpsLab and ITBench in its realization of comprehensive, high-fidelity failure drills. SREGym implements an extensible software architecture that orchestrates fault injectors and simulators across system stacks, with new capabilities: (1) simulating low-level faults in OS kernels and hardware, (2) coordinating multiple concurrent events into compound drills, and (3) composing noises to model production environments.'
+				'SREGym is a new benchmark for AI-driven SRE (Site Reliability Engineering) techniques for diagnosing and mitigating production failures. SREGym provides a live training ground where high-fidelity failure drills are emulated through fault injectors. SREGym differs from existing SRE benchmarks such as AIOpsLab and ITBench in its realization of comprehensive, high-fidelity failure drills. SREGym implements an extensible software architecture that orchestrates fault injectors and simulators across system stacks, with new capabilities: (1) simulating low-level faults in OS kernels and hardware, (2) coordinating multiple concurrent events into compound drills, and (3) composing noises to model production environments. We demonstrate how to use and extend SREGym and present three representative cases of how AI agents tackle SREGym problems.'
 		},
 		// {
 		// 	title: 'Trace2Script: A Framework for Web UI Test Script Generation from Natural Language Test Cases',

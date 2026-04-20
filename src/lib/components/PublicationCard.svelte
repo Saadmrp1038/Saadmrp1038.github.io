@@ -40,7 +40,7 @@
 					href={links.PDF}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center gap-1 transition-colors"
+					class="inline-flex items-center gap-1 transition-colors hover:underline"
 					style="color: var(--accent);"
 				>
 					<svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
