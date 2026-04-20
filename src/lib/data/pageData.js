@@ -7,6 +7,14 @@ export const RESEARCH_INTERESTS = ['AI4SE', 'Software Testing', 'Cloud Reliabili
 
 export const NEWS_ITEMS = [
 	{
+		date: 'Apr 2025',
+		description: 'Our demo paper <span class="font-semibold italic text-gray-900 dark:text-slate-100">SREGym: A Live Training Ground for AI SRE Agents with High-Fidelity Failure Drills</span> got accepted at <span class="font-semibold italic text-gray-900 dark:text-slate-100">ACM CAIS \'26</span> as a System Demonstration'
+	},
+	{
+		date: 'Apr 2025',
+		description: 'We got <a href="https://siebelschool.illinois.edu/news/sregym" class="underline hover:text-blue-500 transition-colors">featured on Illinois CS News</a> for <span class="font-semibold italic text-gray-900 dark:text-slate-100">SREGym</span>'
+	},
+	{
 		date: 'Jul 2025',
 		description: 'My paper NuevAI</span> got accepted at <span class="font-semibold italic text-gray-900 dark:text-slate-100">CHItaly 2025</span>'
 	},

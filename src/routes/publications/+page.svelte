@@ -2,17 +2,17 @@
 	import PublicationCard from '$lib/components/PublicationCard.svelte';
 
 	const publications = [
-		{
-			title: 'Trace2Script: A Framework for Web UI Test Script Generation from Natural Language Test Cases',
-			authors: 'Co-first author',
-			venue: 'Under review at FSE 2026',
-			year: '2025',
-			links: {
-				// PDF: 'https://arxiv.org/abs/2501.00000'
-			},
-			abstract:
-				'Automatic Web UI testing is essential for rapid regression testing within continuous development cycles. However, test scripts often rely on UI object locators that must be updated when DOM elements change, making test script maintenance a brittle and time-consuming process. While recent LLM-based approaches promise automation, they produce non-deterministic and unreliable code that is often error-prone and fails to execute. To address these challenges, we introduce Trace2Script, a novel two-stage architecture that generates robust and maintainable test scripts from natural language by decoupling the non-deterministic web traversal phase from the deterministic script generation phase. Trace2Script uses an LLM-guided web agent to execute natural language instructions and capture raw interaction traces, including initially fragile locators (e.g., absolute XPaths). A heuristic, rule-based algorithm then processes this trace, converting it into a deterministic executable test script with robust, human-readable locators. We evaluated Trace2Script on 445 test cases from 19 production websites. It successfully executed 84% of these cases, and for all correctly executed traces, it deterministically generated the corresponding robust test scripts. Our generated scripts demonstrated superior robustness to UI changes, maintaining a 90% success rate under structural modifications, significantly outperforming traditional record-and-replay tools. Furthermore, an industry survey with 15 engineers confirmed the scripts meet professional standards for robustness and maintainability, reducing test generation time by up to 10x compared to manual efforts.'
-		},
+		// {
+		// 	title: 'Trace2Script: A Framework for Web UI Test Script Generation from Natural Language Test Cases',
+		// 	authors: 'Co-first author',
+		// 	venue: 'Under review at FSE 2026',
+		// 	year: '2025',
+		// 	links: {
+		// 		// PDF: 'https://arxiv.org/abs/2501.00000'
+		// 	},
+		// 	abstract:
+		// 		'Automatic Web UI testing is essential for rapid regression testing within continuous development cycles. However, test scripts often rely on UI object locators that must be updated when DOM elements change, making test script maintenance a brittle and time-consuming process. While recent LLM-based approaches promise automation, they produce non-deterministic and unreliable code that is often error-prone and fails to execute. To address these challenges, we introduce Trace2Script, a novel two-stage architecture that generates robust and maintainable test scripts from natural language by decoupling the non-deterministic web traversal phase from the deterministic script generation phase. Trace2Script uses an LLM-guided web agent to execute natural language instructions and capture raw interaction traces, including initially fragile locators (e.g., absolute XPaths). A heuristic, rule-based algorithm then processes this trace, converting it into a deterministic executable test script with robust, human-readable locators. We evaluated Trace2Script on 445 test cases from 19 production websites. It successfully executed 84% of these cases, and for all correctly executed traces, it deterministically generated the corresponding robust test scripts. Our generated scripts demonstrated superior robustness to UI changes, maintaining a 90% success rate under structural modifications, significantly outperforming traditional record-and-replay tools. Furthermore, an industry survey with 15 engineers confirmed the scripts meet professional standards for robustness and maintainability, reducing test generation time by up to 10x compared to manual efforts.'
+		// },
 		{
 			title:
 				'NuevAI: Streamlined Dataset Generator and Human Evaluator System for Development of Pedagogical Conversational Agents',
