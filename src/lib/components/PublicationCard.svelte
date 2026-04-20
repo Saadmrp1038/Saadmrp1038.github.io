@@ -24,7 +24,7 @@
 		{/if}
 		<div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm" style="color: var(--text-muted);">
 			{#if authors}
-				<span class="font-medium">{authors}</span>
+				<span class="font-medium">{@html authors}</span>
 			{/if}
 			{#if venue}
 				<span style="color: var(--text-muted); opacity: 0.6;">·</span>
