@@ -3,14 +3,13 @@
  * This file contains the social media links and their associated icons
  */
 
-import { EMAIL_ICON, GITHUB_ICON_DARK, GITHUB_ICON_LIGHT, LINKEDIN_ICON, GOOGLE_SCHOLAR_ICON } from '../constants/icons.js';
+import { EMAIL_ICON, GITHUB_ICON, LINKEDIN_ICON, GOOGLE_SCHOLAR_ICON } from '../constants/icons.js';
 
 /**
- * Get social links array based on current theme
- * @param {string} theme - Current theme ('dark' or 'light')
+ * Get social links array
  * @returns {Array} Array of social link objects
  */
-export function getSocialLinks(theme) {
+export function getSocialLinks() {
 	return [
 		{
 			href: 'mailto:saadmrp@gmail.com',
@@ -21,7 +20,7 @@ export function getSocialLinks(theme) {
 		{
 			href: 'https://github.com/Saadmrp1038',
 			label: 'GitHub',
-			icon: theme === 'dark' ? GITHUB_ICON_LIGHT : GITHUB_ICON_DARK
+			icon: GITHUB_ICON
 		},
 		{
 			href: 'https://linkedin.com/in/saadmrp',

@@ -6,7 +6,6 @@
 	import NewsItem from '$lib/components/NewsItem.svelte';
 	import SectionHeading from '$lib/components/SectionHeading.svelte';
 	import QuoteBlock from '$lib/components/QuoteBlock.svelte';
-	import { theme } from '$lib/stores/theme.js';
 	import { getSocialLinks } from '$lib/data/socialLinks.js';
 	import {
 		RESEARCH_INTERESTS,
@@ -16,8 +15,7 @@
 		COURAGE_QUOTE
 	} from '$lib/data/pageData.js';
 
-	// Reactive social links that update when theme changes
-	$: socialLinks = getSocialLinks($theme);
+	const socialLinks = getSocialLinks();
 </script>
 
 <main class="min-h-screen" style="background-color: var(--bg-main);">
