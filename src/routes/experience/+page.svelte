@@ -143,7 +143,7 @@
 			type: 'work',
 			logo: zelfLogo
 		},
-		{
+	//	{
 	//	title: 'Software Engineer (Remote)',
 	//	organization: 'Oleyn',
 	//	location: 'Singapore based',
