@@ -1,7 +1,7 @@
 <script>
 	/* Publication links are trusted, external URLs from repository-owned content. */
 	/* eslint-disable svelte/no-navigation-without-resolve */
-	let { title, authors, venue, year, links = {}, abstract } = $props();
+	let { title, authors, venue, year, links = [], abstract } = $props();
 	let expanded = $state(false);
 </script>
 
@@ -35,9 +35,8 @@
 							class:font-semibold={author.self}
 							style:color={author.self ? 'var(--text-primary)' : undefined}
 						>
-							{author.name}
-						</span>{#if index < authors.length - 1},
-						{/if}
+							{author.name}{#if author.coFirst}<sup class="ml-0.5">*</sup>{/if}
+						</span>{#if index < authors.length - 1}<span>,&nbsp;</span>{/if}
 					{/each}
 				</span>
 			{/if}
@@ -52,10 +51,10 @@
 					>{year}</span
 				>
 			{/if}
-			{#if links.PDF}
+			{#each links as link (link.href)}
 				<span style="color: var(--text-muted); opacity: 0.6;">·</span>
 				<a
-					href={links.PDF}
+					href={link.href}
 					target="_blank"
 					rel="noopener noreferrer"
 					class="inline-flex items-center gap-1 transition-colors hover:underline"
@@ -74,9 +73,9 @@
 							d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
 						/>
 					</svg>
-					<span>PDF</span>
+					<span>{link.label}</span>
 				</a>
-			{/if}
+			{/each}
 		</div>
 		{#if abstract && expanded}
 			<div class="mt-2 pt-2" style="border-top: 1px solid var(--border-glass);">

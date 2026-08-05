@@ -66,8 +66,7 @@
 			class="mt-3 text-sm leading-relaxed sm:text-base"
 			style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);"
 		>
-			{description}{#if project}
-				(
+			{description}{#if project}&nbsp;(
 				<a
 					href={project.href}
 					target="_blank"
@@ -75,7 +74,7 @@
 					class="font-medium text-blue-600 hover:underline dark:text-sky-400"
 				>
 					{project.label}
-				</a>)
+				</a>).
 			{/if}
 		</p>
 	{/if}

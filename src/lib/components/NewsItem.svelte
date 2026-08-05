@@ -2,6 +2,14 @@
 	/* News links are trusted, external URLs from repository-owned content. */
 	/* eslint-disable svelte/no-navigation-without-resolve */
 	let { date, segments = [] } = $props();
+
+	function linkClasses(segment) {
+		const interactive = 'transition-colors hover:text-blue-500 hover:underline';
+
+		if (segment.kind === 'publication') return `${interactive} font-semibold italic`;
+		if (segment.kind === 'project') return `${interactive} font-semibold`;
+		return `${interactive} underline`;
+	}
 </script>
 
 <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-3">
@@ -21,12 +29,16 @@
 					href={segment.href}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="underline transition-colors hover:text-blue-500"
+					class={linkClasses(segment)}
 				>
 					{segment.text}
 				</a>
-			{:else if segment.emphasis}
+			{:else if segment.kind === 'publication'}
 				<span class="font-semibold italic" style="color: var(--text-primary);">
+					{segment.text}
+				</span>
+			{:else if segment.kind === 'project'}
+				<span class="font-semibold" style="color: var(--text-primary);">
 					{segment.text}
 				</span>
 			{:else}
