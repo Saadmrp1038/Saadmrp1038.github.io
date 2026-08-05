@@ -1,6 +1,5 @@
 <script>
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import titleImage from '$lib/assets/pixelized.png';
 	import Navbar from '$lib/components/Navbar.svelte';
 
@@ -8,11 +7,23 @@
 </script>
 
 <svelte:head>
+	<title>Saad Mohammad Rafid Pial</title>
+	<meta
+		name="description"
+		content="Portfolio of Saad Mohammad Rafid Pial, a software engineer and AI systems researcher working on AIOps, site reliability engineering, and cloud reliability."
+	/>
+	<meta name="author" content="Saad Mohammad Rafid Pial" />
+	<meta property="og:title" content="Saad Mohammad Rafid Pial" />
+	<meta
+		property="og:description"
+		content="Software engineer and AI systems researcher working on AIOps, site reliability engineering, and cloud reliability."
+	/>
+	<meta property="og:type" content="website" />
 	<link rel="icon" href={titleImage} />
 </svelte:head>
 
 <!-- Background Gradient Blobs for Glassmorphism Effect -->
-<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
 	<!-- Top-Left Amber Blob -->
 	<div
 		class="absolute rounded-full"

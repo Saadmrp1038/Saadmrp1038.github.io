@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import { page } from '$app/stores';
 
 	let { href, label, variant = 'desktop' } = $props();
@@ -10,8 +11,10 @@
 
 {#if variant === 'desktop'}
 	<a
-		{href}
-		class="relative transition-colors duration-200 pb-1 {isActive() ? 'after:w-full' : 'after:w-0 hover:after:w-full'}"
+		href={resolve(href)}
+		class="relative pb-1 transition-colors duration-200 {isActive()
+			? 'after:w-full'
+			: 'after:w-0 hover:after:w-full'}"
 		style="color: {isActive() ? 'var(--text-primary)' : 'var(--text-muted)'};"
 	>
 		{label}
@@ -33,11 +36,12 @@
 	</style>
 {:else}
 	<a
-		{href}
-		class="block py-2.5 px-1 -mx-1 rounded-md hover:translate-x-1 transition-all duration-200 touch-manipulation {isActive() ? 'font-medium' : ''}"
+		href={resolve(href)}
+		class="-mx-1 block touch-manipulation rounded-md px-1 py-2.5 transition-all duration-200 hover:translate-x-1 {isActive()
+			? 'font-medium'
+			: ''}"
 		style="color: {isActive() ? 'var(--text-primary)' : 'var(--text-muted)'};"
 	>
 		{label}
 	</a>
 {/if}
-

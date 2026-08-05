@@ -8,24 +8,24 @@
 
 :root {
 	/* Light Mode (Cream/Paper) */
-	--bg-main: #FDFBF7; /* Warm Cream */
+	--bg-main: #fdfbf7; /* Warm Cream */
 	--bg-glass: rgba(255, 255, 255, 0.7); /* 70% opacity, slightly more opaque to hide text behind */
 	--border-glass: rgba(148, 163, 184, 0.3); /* Slate-200, visible gray line (pencil line) */
 	--text-primary: #334155; /* Slate 700 */
-	--text-muted: #64748B; /* Slate 500 */
-	--accent: #D97706; /* Amber/Gold */
+	--text-muted: #64748b; /* Slate 500 */
+	--accent: #d97706; /* Amber/Gold */
 	--shadow-glass: 0 4px 20px -2px rgba(0, 0, 0, 0.05); /* Increased shadow to lift card */
 	--accent-color-low-opacity: rgba(217, 119, 6, 0.3);
 }
 
 .dark {
 	/* Dark Mode (Midnight/Slate) */
-	--bg-main: #0F172A; /* Deep Slate Blue */
+	--bg-main: #0f172a; /* Deep Slate Blue */
 	--bg-glass: rgba(15, 23, 42, 0.6); /* 60% opacity, Dark Slate */
 	--border-glass: rgba(255, 255, 255, 0.15); /* Increased white rim light (frost edge) */
-	--text-primary: #E2E8F0; /* Slate 200 */
-	--text-muted: #94A3B8; /* Slate 400 */
-	--accent: #F59E0B; /* Bright Amber */
+	--text-primary: #e2e8f0; /* Slate 200 */
+	--text-muted: #94a3b8; /* Slate 400 */
+	--accent: #f59e0b; /* Bright Amber */
 	--shadow-glass: 0 2px 4px -1px rgba(0, 0, 0, 0.1); /* Minimal shadow for dark mode */
 	--accent-color-low-opacity: rgba(245, 158, 11, 0.3);
 	/* Background blob colors for dark mode */
@@ -38,13 +38,13 @@
 	--blob-amber: rgba(217, 119, 6, 0.15); /* Amber-600 at 15% */
 	--blob-indigo: rgba(79, 70, 229, 0.12); /* Indigo-600 at 12% */
 	/* Tag/Chip solid backgrounds for light mode */
-	--tag-bg: #F1F5F9; /* Slate-100 */
+	--tag-bg: #f1f5f9; /* Slate-100 */
 	--tag-border: rgba(100, 116, 139, 0.2);
 }
 
 .dark {
 	/* Tag/Chip solid backgrounds for dark mode */
-	--tag-bg: #1E293B; /* Slate-800 */
+	--tag-bg: #1e293b; /* Slate-800 */
 	--tag-border: rgba(100, 116, 139, 0.2);
 }
 
@@ -65,34 +65,9 @@
 .glass-panel:hover {
 	background: var(--bg-glass);
 	opacity: 0.95;
-	box-shadow: var(--shadow-glass), 0 0 15px var(--accent-color-low-opacity);
-}
-
-/* Ananda Black Font */
-@font-face {
-	font-family: 'Ananda Black';
-	src: url('/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-/* Feelfree Font */
-@font-face {
-	font-family: 'Feelfree';
-	src: url('/fonts/FeelfreePersonalUseRegular-lg2Bw.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-/* Autumn Flowers Font */
-@font-face {
-	font-family: 'Autumn Flowers';
-	src: url('/fonts/AutumnFlowers-9YVZK.otf') format('opentype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+	box-shadow:
+		var(--shadow-glass),
+		0 0 15px var(--accent-color-low-opacity);
 }
 
 /* Kingsman Font */
@@ -110,14 +85,22 @@
 
 /* Primary Typeface: Inter */
 body {
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-family:
+		'Inter',
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		sans-serif;
 	color: var(--text-primary);
 	background-color: var(--bg-main);
 	line-height: 1.7;
 }
 
 /* Headers (H1-H3): Inter ExtraBold with tight tracking */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-family: 'Inter', sans-serif;
 	font-weight: 800; /* ExtraBold */
 	letter-spacing: -0.02em;
@@ -133,11 +116,16 @@ p {
 }
 
 /* Secondary Typeface: JetBrains Mono for code, tags, dates */
-code, pre, .font-mono, [class*="mono"] {
+code,
+pre,
+.font-mono,
+[class*='mono'] {
 	font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
 	font-weight: 500;
 	font-size: 0.9em;
-	font-feature-settings: 'liga' 1, 'calt' 1; /* Enable ligatures */
+	font-feature-settings:
+		'liga' 1,
+		'calt' 1; /* Enable ligatures */
 }
 
 /* Dark mode configuration for Tailwind v4 */

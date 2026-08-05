@@ -1,4 +1,6 @@
 <script>
+	/* Repository-owned URLs and SVG constants are trusted inputs for this component. */
+	/* eslint-disable svelte/no-navigation-without-resolve, svelte/no-at-html-tags */
 	let { href, label, icon, external = true } = $props();
 </script>
 
@@ -12,6 +14,5 @@
 	<span>
 		{@html icon}
 	</span>
-	<span class="hidden lg:inline group-hover:underline">{label}</span>
+	<span class="hidden group-hover:underline lg:inline">{label}</span>
 </a>
-

@@ -7,7 +7,7 @@
 	// Set to true to enable the circular wave transition, false for instant switch
 	const ANIMATE_THEME_TRANSITION = true;
 
-	async function toggleTheme(event) {
+	async function toggleTheme() {
 		if (!ANIMATE_THEME_TRANSITION || !document.startViewTransition) {
 			theme.toggle();
 			return;
@@ -28,10 +28,7 @@
 		// Animate a circular clip-path from the button outward
 		document.documentElement.animate(
 			{
-				clipPath: [
-					`circle(0px at ${x}px ${y}px)`,
-					`circle(${endRadius}px at ${x}px ${y}px)`
-				]
+				clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`]
 			},
 			{
 				duration: 500,
@@ -45,13 +42,15 @@
 <button
 	type="button"
 	onclick={toggleTheme}
-	class="p-2.5 {variant === 'mobile' ? 'rounded-md' : '-mr-2'} transition-all duration-200 touch-manipulation"
+	class="p-2.5 {variant === 'mobile'
+		? 'rounded-md'
+		: '-mr-2'} touch-manipulation transition-all duration-200"
 	style="color: var(--text-muted);"
 	aria-label="Toggle theme"
 >
 	{#if $theme === 'dark'}
 		<!-- Sun icon for light mode -->
-		<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+		<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"
@@ -60,7 +59,7 @@
 		</svg>
 	{:else}
 		<!-- Moon icon for dark mode -->
-		<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+		<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"
@@ -69,4 +68,3 @@
 		</svg>
 	{/if}
 </button>
-

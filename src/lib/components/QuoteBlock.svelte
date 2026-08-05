@@ -4,13 +4,16 @@
 
 <div class="my-4">
 	<blockquote
-		class="pl-4 text-sm sm:text-base rounded-r-md py-3 pr-3"
+		class="rounded-r-md py-3 pr-3 pl-4 text-sm sm:text-base"
 		style="font-family: 'Inter', sans-serif; font-style: italic; line-height: 1.7; border-left: 3px solid var(--accent); background: rgba(217, 119, 6, 0.05); color: var(--text-primary);"
 	>
 		<p class="mb-2">
 			{quote}
 		</p>
-		<footer class="text-xs flex items-center gap-2 not-italic" style="font-family: 'Inter', sans-serif; color: var(--text-muted);">
+		<footer
+			class="flex items-center gap-2 text-xs not-italic"
+			style="font-family: 'Inter', sans-serif; color: var(--text-muted);"
+		>
 			<span>— {author}</span>
 			{#if imageUrl}
 				<button
@@ -20,7 +23,7 @@
 					title="View image"
 					aria-label="Open image in new tab"
 				>
-					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -39,4 +42,3 @@
 		background: transparent;
 	}
 </style>
-
