@@ -85,8 +85,25 @@ export const BIO_TEXT = {
 	full: "Hi, I am Pial. I am an incoming MSCS student at the University of Illinois Urbana-Champaign, starting in August 2026, where I will work in Professor Tianyin Xu's lab. My research spans AI for systems, site reliability engineering, and formal methods, including SREGym and Specula. Previously, I worked as a Software Engineer at Monsha.AI, building AI-powered tools for educators. I earned my BSc in Computer Science and Engineering from the Bangladesh University of Engineering and Technology (BUET)."
 };
 
-export const RESEARCH_DESCRIPTION =
-	'My research focuses on AI agents that can reason about, verify, diagnose, and repair complex software systems. I contribute to SREGym, a live benchmark for evaluating AI agents on realistic cloud incidents, and Specula, an autonomous system for generating formal specifications and model-checking system code.';
+export const RESEARCH_DESCRIPTION = [
+	{
+		text: 'My research focuses on AI agents that can reason about, verify, diagnose, and repair complex software systems. I contribute to '
+	},
+	{
+		text: 'SREGym',
+		href: 'https://github.com/SREGym/SREGym'
+	},
+	{
+		text: ', a live benchmark for evaluating AI agents on realistic cloud incidents, and '
+	},
+	{
+		text: 'Specula',
+		href: 'https://arxiv.org/abs/2607.25333'
+	},
+	{
+		text: ', an autonomous system for generating formal specifications and model-checking system code.'
+	}
+];
 
 export const COURAGE_QUOTE = {
 	text: "You're beautiful as you are, Courage. With all your imperfections, you can do anything.",

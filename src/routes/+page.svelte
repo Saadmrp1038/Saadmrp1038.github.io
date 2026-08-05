@@ -1,4 +1,6 @@
 <script>
+	/* Homepage content links are trusted, external URLs from repository-owned data. */
+	/* eslint-disable svelte/no-navigation-without-resolve */
 	import profilePic from '$lib/assets/profile-2.jpg';
 	import courageImage from '$lib/assets/courage.webp';
 	import SocialLink from '$lib/components/SocialLink.svelte';
@@ -96,7 +98,21 @@
 							class="mb-4 text-sm leading-relaxed sm:text-base"
 							style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);"
 						>
-							{RESEARCH_DESCRIPTION}
+							{#each RESEARCH_DESCRIPTION as segment, index (`${segment.text}-${index}`)}
+								{#if segment.href}
+									<a
+										href={segment.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="font-medium underline transition-opacity hover:opacity-80"
+										style="color: var(--accent); text-underline-offset: 0.2em;"
+									>
+										{segment.text}
+									</a>
+								{:else}
+									{segment.text}
+								{/if}
+							{/each}
 						</p>
 					</div>
 				</div>

@@ -1,6 +1,11 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { BIO_TEXT, NEWS_ITEMS, RESEARCH_INTERESTS } from '../src/lib/data/pageData.js';
+import {
+	BIO_TEXT,
+	NEWS_ITEMS,
+	RESEARCH_DESCRIPTION,
+	RESEARCH_INTERESTS
+} from '../src/lib/data/pageData.js';
 
 const MONTHS = new Map([
 	['Jan', 0],
@@ -52,4 +57,13 @@ test('homepage biography and research interests are populated', () => {
 	assert.ok(BIO_TEXT.full.trim());
 	assert.ok(RESEARCH_INTERESTS.length > 0);
 	assert.ok(RESEARCH_INTERESTS.every((interest) => interest.trim()));
+
+	const linkedResearchProjects = new Map(
+		RESEARCH_DESCRIPTION.filter((segment) => segment.href).map((segment) => [
+			segment.text,
+			segment.href
+		])
+	);
+	assert.equal(linkedResearchProjects.get('SREGym'), 'https://github.com/SREGym/SREGym');
+	assert.equal(linkedResearchProjects.get('Specula'), 'https://arxiv.org/abs/2607.25333');
 });
