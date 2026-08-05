@@ -12,7 +12,7 @@
 			title: 'Master of Science in Computer Science',
 			organization: 'University of Illinois Urbana-Champaign',
 			location: 'Urbana-Champaign, IL',
-			dateRange: 'Aug 2026 – Present',
+			dateRange: 'Starting Aug 2026',
 			description:
 				"I am beginning my graduate studies and will be working in Professor Tianyin Xu's lab.",
 			logo: uiucLogo
@@ -33,9 +33,9 @@
 			organization: "Professor Tianyin Xu's Lab",
 			organizationUrl: 'https://tianyin.github.io/',
 			location: 'University of Illinois Urbana-Champaign',
-			dateRange: 'May 2025 – Present',
+			dateRange: 'May 2025 – Jul 2026',
 			description:
-				'Working on SREGym, a benchmark framework for evaluating how AI agents detect, localize, and fix cloud-native failures. My contributions include building fault injection modules for OS and hardware-level failures, expanding the Kubernetes misconfiguration library, and modernizing legacy microservice benchmarks. Currently a core contributor to the project',
+				'Worked on SREGym, a benchmark framework for evaluating how AI agents detect, localize, and fix cloud-native failures. My contributions included building fault injection modules for OS and hardware-level failures, expanding the Kubernetes misconfiguration library, and modernizing legacy microservice benchmarks',
 			project: {
 				label: 'SREGym',
 				href: 'https://github.com/SREGym/SREGym'
@@ -49,7 +49,7 @@
 			location: 'BUET',
 			dateRange: 'May 2025 – Sep 2025',
 			description:
-				'Built an agentic framework that converts natural language test specifications for web UIs into executable Playwright scripts. Developed the core algorithm for translating web agent interaction traces into structured test code. Evaluations showed competitive performance against industry-standard tools. Co-first authored a paper currently under review at FSE 2026.',
+				'Built an agentic framework that converts natural language test specifications for web UIs into executable Playwright scripts. Developed the core algorithm for translating web agent interaction traces into structured test code. Evaluations showed competitive performance against industry-standard tools.',
 			logo: buetLogo
 		},
 		{
@@ -104,38 +104,32 @@
 	];
 </script>
 
-<main class="min-h-screen" style="background-color: var(--bg-main);">
-	<div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12 md:py-20">
-		<!-- Education Section -->
-		<div class="mb-12 sm:mb-16">
-			<h1
-				class="mb-8 border-b pb-3 text-2xl font-bold sm:mb-10 sm:text-3xl"
-				style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); border-color: var(--border-glass);"
-			>
-				Education
-			</h1>
-			<div class="space-y-4 sm:space-y-6">
-				{#each education as item (`${item.organization}-${item.title}`)}
-					<ExperienceCard
-						title={item.title}
-						organization={item.organization}
-						location={item.location}
-						dateRange={item.dateRange}
-						description={item.description}
-						logo={item.logo}
-					/>
-				{/each}
-			</div>
-		</div>
+<svelte:head>
+	<title>Experience | Saad Mohammad Rafid Pial</title>
+	<meta
+		name="description"
+		content="Research, education, and industry experience of Saad Mohammad Rafid Pial."
+	/>
+	<link rel="canonical" href="https://saadmrp1038.github.io/experience" />
+</svelte:head>
 
-		<!-- Research Experience Section -->
-		<div class="mb-12 sm:mb-16">
-			<h1
-				class="mb-8 border-b pb-3 text-2xl font-bold sm:mb-10 sm:text-3xl"
+<main id="main-content" class="min-h-screen" style="background-color: var(--bg-main);">
+	<div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12 md:py-20">
+		<h1
+			class="mb-10 border-b pb-3 text-2xl font-bold sm:mb-12 sm:text-3xl"
+			style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); border-color: var(--border-glass);"
+		>
+			Experience
+		</h1>
+
+		<section class="mb-12 sm:mb-16" aria-labelledby="research-experience-heading">
+			<h2
+				id="research-experience-heading"
+				class="mb-6 text-xl font-bold sm:mb-8 sm:text-2xl"
 				style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); border-color: var(--border-glass);"
 			>
 				Research Experience
-			</h1>
+			</h2>
 			<div class="space-y-4 sm:space-y-6">
 				{#each researchExperiences as experience (`${experience.organization}-${experience.title}`)}
 					<ExperienceCard
@@ -150,16 +144,38 @@
 					/>
 				{/each}
 			</div>
-		</div>
+		</section>
 
-		<!-- Work Experience Section -->
-		<div>
-			<h1
-				class="mb-8 border-b pb-3 text-2xl font-bold sm:mb-10 sm:text-3xl"
+		<section class="mb-12 sm:mb-16" aria-labelledby="education-heading">
+			<h2
+				id="education-heading"
+				class="mb-6 text-xl font-bold sm:mb-8 sm:text-2xl"
 				style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); border-color: var(--border-glass);"
 			>
-				Work Experience
-			</h1>
+				Education
+			</h2>
+			<div class="space-y-4 sm:space-y-6">
+				{#each education as item (`${item.organization}-${item.title}`)}
+					<ExperienceCard
+						title={item.title}
+						organization={item.organization}
+						location={item.location}
+						dateRange={item.dateRange}
+						description={item.description}
+						logo={item.logo}
+					/>
+				{/each}
+			</div>
+		</section>
+
+		<section aria-labelledby="industry-experience-heading">
+			<h2
+				id="industry-experience-heading"
+				class="mb-6 text-xl font-bold sm:mb-8 sm:text-2xl"
+				style="font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); border-color: var(--border-glass);"
+			>
+				Industry Experience
+			</h2>
 			<div class="space-y-4 sm:space-y-6">
 				{#each workExperiences as experience (`${experience.organization}-${experience.title}`)}
 					<ExperienceCard
@@ -172,6 +188,6 @@
 					/>
 				{/each}
 			</div>
-		</div>
+		</section>
 	</div>
 </main>

@@ -13,6 +13,7 @@
 					src={logo}
 					alt={organization ? `${organization} logo` : 'Organization logo'}
 					class="h-16 w-16 rounded bg-white object-contain p-2 sm:h-20 sm:w-20"
+					loading="lazy"
 				/>
 			</div>
 		{/if}
@@ -27,7 +28,7 @@
 					{title}
 				</h3>
 				<div
-					class="flex flex-row items-baseline gap-1 text-sm sm:gap-2"
+					class="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-sm"
 					style="color: var(--text-muted);"
 				>
 					{#if organization}
@@ -36,8 +37,8 @@
 								href={organizationUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="font-medium transition-colors hover:underline"
-								style="color: var(--text-muted);"
+								class="font-medium underline transition-opacity hover:opacity-80"
+								style="color: var(--accent); text-underline-offset: 0.2em;"
 							>
 								{organization}
 							</a>
@@ -63,7 +64,7 @@
 	</div>
 	{#if description}
 		<p
-			class="mt-3 text-sm leading-relaxed sm:text-base"
+			class="mt-3 max-w-4xl text-sm leading-relaxed sm:text-base"
 			style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);"
 		>
 			{description}{#if project}<span class="inline-flex whitespace-nowrap"
@@ -71,7 +72,8 @@
 						href={project.href}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="font-medium text-blue-600 hover:underline dark:text-sky-400"
+						class="font-medium underline transition-opacity hover:opacity-80"
+						style="color: var(--accent); text-underline-offset: 0.2em;"
 					>
 						{project.label}
 					</a><span>).</span></span

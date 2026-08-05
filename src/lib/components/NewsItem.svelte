@@ -4,7 +4,7 @@
 	let { date, segments = [] } = $props();
 
 	function linkClasses(segment) {
-		const interactive = 'underline transition-colors hover:text-blue-500';
+		const interactive = 'underline transition-opacity hover:opacity-80';
 
 		if (segment.kind === 'publication') return `${interactive} font-semibold italic`;
 		if (segment.kind === 'project') return `${interactive} font-semibold`;
@@ -30,6 +30,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					class={linkClasses(segment)}
+					style="color: var(--accent); text-underline-offset: 0.2em;"
 				>
 					{segment.text}
 				</a>

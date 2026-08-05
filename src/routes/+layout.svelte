@@ -10,17 +10,19 @@
 	<title>Saad Mohammad Rafid Pial</title>
 	<meta
 		name="description"
-		content="Portfolio of Saad Mohammad Rafid Pial, a software engineer and AI systems researcher working on AIOps, site reliability engineering, and cloud reliability."
+		content="Personal website of Saad Mohammad Rafid Pial, an MSCS student at UIUC researching AI for systems, site reliability engineering, cloud reliability, and formal methods."
 	/>
 	<meta name="author" content="Saad Mohammad Rafid Pial" />
 	<meta property="og:title" content="Saad Mohammad Rafid Pial" />
 	<meta
 		property="og:description"
-		content="Software engineer and AI systems researcher working on AIOps, site reliability engineering, and cloud reliability."
+		content="MSCS student at UIUC researching AI for systems, site reliability engineering, cloud reliability, and formal methods."
 	/>
 	<meta property="og:type" content="website" />
 	<link rel="icon" href={titleImage} />
 </svelte:head>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- Background Gradient Blobs for Glassmorphism Effect -->
 <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -37,6 +39,6 @@
 </div>
 
 <Navbar />
-<div style="padding-top: 80px;">
+<div class="site-content">
 	{@render children()}
 </div>

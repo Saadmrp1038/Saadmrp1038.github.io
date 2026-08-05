@@ -20,8 +20,8 @@
 					onclick={() => window.open(imageUrl, '_blank')}
 					class="p-1 transition-colors"
 					style="color: var(--text-muted);"
-					title="View image"
-					aria-label="Open image in new tab"
+					title="View Courage image"
+					aria-label="Open Courage image in a new tab"
 				>
 					<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path

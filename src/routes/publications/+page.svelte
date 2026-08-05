@@ -3,6 +3,7 @@
 
 	const publications = [
 		{
+			id: 'specula',
 			title: 'Specula: Scaling Formal Specifications for Autonomous Model Checking of System Code',
 			authors: [
 				{ name: 'Q Cheng' },
@@ -22,6 +23,7 @@
 				'Specula is an autonomous agentic system that generates TLA+ specifications for complex system code and uses them for model checking and bug finding. Its self-evolving workflow improves specification quality while reducing hallucinations and reward hacking. An evaluation across 48 open-source systems found 249 bugs, including deep issues that are difficult to uncover with conventional approaches.'
 		},
 		{
+			id: 'edupresenta',
 			title:
 				'EduPresenta: A Conversational AI Agent for Pedagogically Sound Presentation Generation for Instructors',
 			authors: [
@@ -30,6 +32,7 @@
 				{ name: 'S Sharmin' }
 			],
 			venue: 'HCII',
+			venueUrl: 'https://2026.hci.international/',
 			year: '2026',
 			links: [
 				{
@@ -41,6 +44,7 @@
 				'EduPresenta is a conversational AI system for creating presentation slides aligned with pedagogical goals such as learning objectives, Bloom’s Taxonomy, depth of knowledge, and outcome-based education. An evaluation with undergraduate STEM instructors found that the system can produce appealing presentations, while human guidance remains important for maintaining pedagogical alignment.'
 		},
 		{
+			id: 'sregym-benchmark',
 			title: 'SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios',
 			authors: [
 				{ name: 'J Clark', coFirst: true },
@@ -59,6 +63,7 @@
 				'SREGym is a live benchmark for evaluating AI agents on realistic cloud failures. It combines real cloud-native stacks with fault and noise injectors to model failures across system layers, including correlated and metastable failures. The benchmark currently contains 90 challenging SRE problems and reveals substantial differences in how frontier agents diagnose and mitigate incidents.'
 		},
 		{
+			id: 'sregym-demo',
 			title: 'SREGym: A Live Training Ground for AI SRE Agents with High-Fidelity Failure Drills',
 			authors: [
 				{ name: 'J Clark' },
@@ -68,6 +73,7 @@
 				{ name: 'T Xu' }
 			],
 			venue: 'ACM CAIS',
+			venueUrl: 'https://www.caisconf.org/',
 			year: '2026',
 			links: [
 				{
@@ -79,10 +85,12 @@
 				'SREGym is a new benchmark for AI-driven SRE (Site Reliability Engineering) techniques for diagnosing and mitigating production failures. SREGym provides a live training ground where high-fidelity failure drills are emulated through fault injectors. SREGym differs from existing SRE benchmarks such as AIOpsLab and ITBench in its realization of comprehensive, high-fidelity failure drills. SREGym implements an extensible software architecture that orchestrates fault injectors and simulators across system stacks, with new capabilities: (1) simulating low-level faults in OS kernels and hardware, (2) coordinating multiple concurrent events into compound drills, and (3) composing noises to model production environments. We demonstrate how to use and extend SREGym and present three representative cases of how AI agents tackle SREGym problems.'
 		},
 		{
+			id: 'nuevai',
 			title:
 				'NuevAI: Streamlined Dataset Generator and Human Evaluator System for Development of Pedagogical Conversational Agents',
 			authors: [{ name: 'S Sayeed' }, { name: 'SMR Pial', self: true }, { name: 'A Iqbal' }],
 			venue: 'CHItaly',
+			venueUrl: 'https://chitaly2025.di.unisa.it/',
 			year: '2025',
 			links: [
 				{
@@ -96,7 +104,16 @@
 	];
 </script>
 
-<main class="min-h-screen" style="background-color: var(--bg-main);">
+<svelte:head>
+	<title>Publications | Saad Mohammad Rafid Pial</title>
+	<meta
+		name="description"
+		content="Publications by Saad Mohammad Rafid Pial on AI for systems, site reliability engineering, formal methods, and educational AI."
+	/>
+	<link rel="canonical" href="https://saadmrp1038.github.io/publications" />
+</svelte:head>
+
+<main id="main-content" class="min-h-screen" style="background-color: var(--bg-main);">
 	<div class="mx-auto max-w-6xl px-3 py-4 sm:px-6 sm:py-8 md:py-12">
 		<h1
 			class="mb-4 border-b pb-1.5 text-xl font-bold sm:mb-8 sm:pb-2 sm:text-3xl"
@@ -104,12 +121,17 @@
 		>
 			Publications
 		</h1>
+		<p class="mb-4 text-xs sm:mb-6 sm:text-sm" style="color: var(--text-muted);">
+			<sup>*</sup> Equal contribution
+		</p>
 		<div class="space-y-2 sm:space-y-4">
 			{#each publications as publication (publication.title)}
 				<PublicationCard
+					id={publication.id}
 					title={publication.title}
 					authors={publication.authors}
 					venue={publication.venue}
+					venueUrl={publication.venueUrl}
 					year={publication.year}
 					links={publication.links}
 					abstract={publication.abstract}

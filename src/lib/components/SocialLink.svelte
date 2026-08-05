@@ -8,7 +8,8 @@
 	{href}
 	target={external ? '_blank' : undefined}
 	rel={external ? 'noopener noreferrer' : undefined}
-	class="group flex items-center gap-1.5 transition-all duration-200"
+	aria-label={label}
+	class="group flex min-h-11 min-w-11 items-center justify-center gap-1.5 rounded-md transition-all duration-200 lg:min-h-0 lg:min-w-0 lg:justify-start lg:rounded-none"
 	style="color: var(--text-primary);"
 >
 	<span>

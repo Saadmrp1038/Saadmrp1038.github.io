@@ -20,18 +20,24 @@
 	function closeMenu() {
 		menuOpen = false;
 	}
+
+	function handleKeydown(event) {
+		if (event.key === 'Escape') closeMenu();
+	}
 </script>
+
+<svelte:window onkeydown={handleKeydown} />
 
 <header
 	class="navbar-header fixed top-0 right-0 left-0 z-50 backdrop-blur-md"
 	style="border-radius: 0; border-left: none; border-right: none; border-top: none; border-bottom: 1px solid var(--border-glass); box-shadow: var(--shadow-glass);"
 >
-	<nav class="mx-auto max-w-6xl px-4 py-4 sm:px-6 sm:py-6">
+	<nav class="mx-auto max-w-6xl px-4 py-4 sm:px-6 sm:py-5" aria-label="Primary navigation">
 		<div class="flex items-center justify-between gap-4">
 			<!-- Name with better typography and mobile truncation -->
 			<a href={resolve('/')} class="group min-w-0 flex-1">
 				<p
-					class="truncate font-medium tracking-tight transition-colors duration-200"
+					class="truncate leading-none font-medium tracking-tight transition-colors duration-200"
 					style="font-family: 'Kingsman', cursive; font-size: 2rem; color: var(--text-primary);"
 				>
 					<span class="hidden sm:inline">Saad Mohammad Rafid Pial</span>
@@ -55,8 +61,9 @@
 					onclick={toggleMenu}
 					class="-mr-1 touch-manipulation rounded-md p-2.5 transition-all duration-200"
 					style="color: var(--text-muted);"
-					aria-label="Menu"
+					aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
 					aria-expanded={menuOpen}
+					aria-controls="mobile-navigation"
 				>
 					<svg
 						class="h-6 w-6 transition-transform duration-200 {menuOpen ? 'rotate-90' : ''}"
@@ -76,11 +83,7 @@
 		</div>
 
 		<!-- Mobile Navigation with slide effect -->
-		<div
-			class="overflow-hidden transition-all duration-300 ease-in-out md:hidden {menuOpen
-				? 'mt-4 max-h-60 opacity-100'
-				: 'mt-0 max-h-0 opacity-0'}"
-		>
+		<div id="mobile-navigation" hidden={!menuOpen} class="mt-4 md:hidden">
 			<div
 				class="space-y-2 rounded-b-lg pt-4 shadow-lg"
 				style="background: var(--bg-main); border-top: 1px solid var(--border-glass);"

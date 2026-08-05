@@ -33,13 +33,13 @@ export const NEWS_ITEMS = [
 		id: 'sregym-cais-2026',
 		date: 'May 2026',
 		segments: [
-			{ text: 'Our system demonstration paper ' },
+			{ text: 'Our paper ' },
 			{
-				text: 'SREGym',
+				text: 'SREGym: A Live Training Ground for AI SRE Agents with High-Fidelity Failure Drills',
 				href: 'https://doi.org/10.1145/3786335.3813208',
 				kind: 'publication'
 			},
-			{ text: ' was published at ACM CAIS 2026' }
+			{ text: ' was published as a system demonstration at ACM CAIS 2026' }
 		]
 	},
 	{
@@ -81,8 +81,8 @@ export const NEWS_ITEMS = [
 ];
 
 export const BIO_TEXT = {
-	short: 'MSCS Student@UIUC · Research Intern@UIUC · AI for Systems',
-	full: "Hi, I am Pial. I am beginning an MS in Computer Science at the University of Illinois Urbana-Champaign in August 2026, where I also work as a research intern in Professor Tianyin Xu's lab. My research spans AI for systems, site reliability engineering, and formal methods, including SREGym and Specula. Previously, I worked as a Software Engineer at Monsha.AI, building AI-powered tools for educators. I earned my BSc in Computer Science and Engineering from the Bangladesh University of Engineering and Technology (BUET)."
+	short: 'Incoming MSCS Student@UIUC · AI for Systems',
+	full: "Hi, I am Pial. I am an incoming MSCS student at the University of Illinois Urbana-Champaign, starting in August 2026, where I will work in Professor Tianyin Xu's lab. My research spans AI for systems, site reliability engineering, and formal methods, including SREGym and Specula. Previously, I worked as a Software Engineer at Monsha.AI, building AI-powered tools for educators. I earned my BSc in Computer Science and Engineering from the Bangladesh University of Engineering and Technology (BUET)."
 };
 
 export const RESEARCH_DESCRIPTION =

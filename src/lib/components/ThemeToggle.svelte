@@ -8,7 +8,9 @@
 	const ANIMATE_THEME_TRANSITION = true;
 
 	async function toggleTheme() {
-		if (!ANIMATE_THEME_TRANSITION || !document.startViewTransition) {
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+		if (!ANIMATE_THEME_TRANSITION || !document.startViewTransition || prefersReducedMotion) {
 			theme.toggle();
 			return;
 		}
@@ -42,11 +44,12 @@
 <button
 	type="button"
 	onclick={toggleTheme}
-	class="p-2.5 {variant === 'mobile'
+	class="p-3 {variant === 'mobile'
 		? 'rounded-md'
 		: '-mr-2'} touch-manipulation transition-all duration-200"
 	style="color: var(--text-muted);"
-	aria-label="Toggle theme"
+	aria-label={$theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+	title={$theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
 >
 	{#if $theme === 'dark'}
 		<!-- Sun icon for light mode -->

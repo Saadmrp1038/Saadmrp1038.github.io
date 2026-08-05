@@ -18,7 +18,16 @@
 	const socialLinks = getSocialLinks();
 </script>
 
-<main class="min-h-screen" style="background-color: var(--bg-main);">
+<svelte:head>
+	<title>About | Saad Mohammad Rafid Pial</title>
+	<meta
+		name="description"
+		content="About Saad Mohammad Rafid Pial, an MSCS student at UIUC researching AI for systems, site reliability engineering, cloud reliability, and formal methods."
+	/>
+	<link rel="canonical" href="https://saadmrp1038.github.io/" />
+</svelte:head>
+
+<main id="main-content" class="min-h-screen" style="background-color: var(--bg-main);">
 	<div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12 md:py-20">
 		<div class="flex flex-col gap-8 lg:flex-row lg:gap-12">
 			<!-- Left Column: Profile Image, Title, and Social Links -->
@@ -57,7 +66,7 @@
 			<div class="flex-1 lg:w-2/3">
 				<!-- About Me -->
 				<div class="mb-8 sm:mb-10">
-					<SectionHeading title="About Me" />
+					<SectionHeading title="About Me" level={1} />
 					<div class="prose max-w-none prose-gray dark:prose-invert">
 						<p
 							class="mb-4 text-sm leading-relaxed sm:text-base"
