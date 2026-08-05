@@ -14,7 +14,7 @@
 			location: 'Urbana-Champaign, IL',
 			dateRange: 'Aug 2026 – Present',
 			description:
-				'Graduate studies focused on AI for systems, site reliability engineering, cloud reliability, and formal methods.',
+				"I am beginning my graduate studies and will be working in Professor Tianyin Xu's lab.",
 			logo: uiucLogo
 		},
 		{

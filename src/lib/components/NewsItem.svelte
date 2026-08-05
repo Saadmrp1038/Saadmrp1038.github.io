@@ -4,11 +4,11 @@
 	let { date, segments = [] } = $props();
 
 	function linkClasses(segment) {
-		const interactive = 'transition-colors hover:text-blue-500 hover:underline';
+		const interactive = 'underline transition-colors hover:text-blue-500';
 
 		if (segment.kind === 'publication') return `${interactive} font-semibold italic`;
 		if (segment.kind === 'project') return `${interactive} font-semibold`;
-		return `${interactive} underline`;
+		return interactive;
 	}
 </script>
 

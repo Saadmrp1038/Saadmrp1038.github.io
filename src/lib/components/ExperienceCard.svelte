@@ -66,15 +66,16 @@
 			class="mt-3 text-sm leading-relaxed sm:text-base"
 			style="font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-primary);"
 		>
-			{description}{#if project}&nbsp;(
-				<a
-					href={project.href}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="font-medium text-blue-600 hover:underline dark:text-sky-400"
+			{description}{#if project}<span class="inline-flex whitespace-nowrap"
+					><span>&nbsp;(</span><a
+						href={project.href}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="font-medium text-blue-600 hover:underline dark:text-sky-400"
+					>
+						{project.label}
+					</a><span>).</span></span
 				>
-					{project.label}
-				</a>).
 			{/if}
 		</p>
 	{/if}
