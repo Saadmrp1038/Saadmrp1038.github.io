@@ -98,7 +98,7 @@ export const RESEARCH_DESCRIPTION = [
 	},
 	{
 		text: 'Specula',
-		href: 'https://arxiv.org/abs/2607.25333'
+		href: 'https://github.com/specula-org/Specula'
 	},
 	{
 		text: ', an autonomous system for generating formal specifications and model-checking system code.'

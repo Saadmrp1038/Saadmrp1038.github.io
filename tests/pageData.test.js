@@ -65,5 +65,5 @@ test('homepage biography and research interests are populated', () => {
 		])
 	);
 	assert.equal(linkedResearchProjects.get('SREGym'), 'https://github.com/SREGym/SREGym');
-	assert.equal(linkedResearchProjects.get('Specula'), 'https://arxiv.org/abs/2607.25333');
+	assert.equal(linkedResearchProjects.get('Specula'), 'https://github.com/specula-org/Specula');
 });
