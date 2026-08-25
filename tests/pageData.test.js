@@ -55,6 +55,9 @@ test('news items are valid and newest first', () => {
 test('homepage biography and research interests are populated', () => {
 	assert.ok(BIO_TEXT.short.trim());
 	assert.ok(BIO_TEXT.full.trim());
+	assert.match(BIO_TEXT.short, /MSCS Student@UIUC/);
+	assert.match(BIO_TEXT.short, /Research Assistant@UIUC/);
+	assert.doesNotMatch(`${BIO_TEXT.short} ${BIO_TEXT.full}`, /incoming/i);
 	assert.ok(RESEARCH_INTERESTS.length > 0);
 	assert.ok(RESEARCH_INTERESTS.every((interest) => interest.trim()));
 

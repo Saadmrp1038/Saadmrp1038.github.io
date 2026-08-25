@@ -20,9 +20,8 @@
 			roles: [
 				{
 					title: 'Master of Science in Computer Science',
-					dateRange: 'Starting Aug 2026',
-					description:
-						"I am beginning my graduate studies and will be working in Professor Tianyin Xu's lab."
+					dateRange: 'Aug 2026 – Present',
+					description: 'Pursuing graduate studies in Computer Science.'
 				}
 			]
 		},
@@ -49,6 +48,12 @@
 			logo: uiucLogo,
 			logoAlt: 'University of Illinois Urbana-Champaign logo',
 			roles: [
+				{
+					title: 'Research Assistant',
+					dateRange: 'Aug 2026 – Present',
+					description:
+						"Working on AI for systems and site reliability engineering in Professor Tianyin Xu's lab."
+				},
 				{
 					title: 'Remote Research Intern',
 					dateRange: 'May 2025 – Jul 2026',

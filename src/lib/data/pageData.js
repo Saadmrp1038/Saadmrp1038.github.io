@@ -14,7 +14,7 @@ export const NEWS_ITEMS = [
 	{
 		id: 'uiuc-mscs-2026',
 		date: 'Aug 2026',
-		segments: [{ text: 'Starting my MS in Computer Science at UIUC' }]
+		segments: [{ text: 'Started my MS in Computer Science at UIUC' }]
 	},
 	{
 		id: 'edupresenta-hcii-2026',
@@ -81,8 +81,8 @@ export const NEWS_ITEMS = [
 ];
 
 export const BIO_TEXT = {
-	short: 'Incoming MSCS Student@UIUC · AI for Systems',
-	full: "Hi, I am Pial. I am an incoming MSCS student at the University of Illinois Urbana-Champaign, starting in August 2026, where I will work in Professor Tianyin Xu's lab. My research spans AI for systems, site reliability engineering, and formal methods, including SREGym and Specula. Previously, I worked as a Software Engineer at Monsha.AI, building AI-powered tools for educators. I earned my BSc in Computer Science and Engineering from the Bangladesh University of Engineering and Technology (BUET)."
+	short: 'MSCS Student@UIUC · Research Assistant@UIUC · AI for Systems',
+	full: "Hi, I am Pial. I am an MSCS student and research assistant at the University of Illinois Urbana-Champaign, where I work in Professor Tianyin Xu's lab. My research spans AI for systems, site reliability engineering, and formal methods, including SREGym and Specula. Previously, I worked as a Software Engineer at Monsha.AI, building AI-powered tools for educators. I earned my BSc in Computer Science and Engineering from the Bangladesh University of Engineering and Technology (BUET)."
 };
 
 export const RESEARCH_DESCRIPTION = [
