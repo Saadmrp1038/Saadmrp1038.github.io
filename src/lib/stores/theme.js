@@ -2,9 +2,23 @@ import { writable } from 'svelte/store';
 
 function getInitialTheme() {
 	if (typeof window === 'undefined') return 'light';
-	const savedTheme = localStorage.getItem('theme');
-	if (savedTheme) return savedTheme;
+	let savedTheme;
+	try {
+		savedTheme = window.localStorage.getItem('theme');
+	} catch {
+		// Storage may be disabled; the theme still works for this visit.
+	}
+	if (savedTheme === 'dark' || savedTheme === 'light') return savedTheme;
 	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function persistTheme(value) {
+	if (typeof window === 'undefined') return;
+	try {
+		window.localStorage.setItem('theme', value);
+	} catch {
+		// Keep the in-memory theme when storage is unavailable.
+	}
 }
 
 function applyThemeClass(theme) {
@@ -27,26 +41,26 @@ function createThemeStore() {
 		applyThemeClass(initialTheme);
 	}
 
+	function set(value) {
+		setStore(value);
+		persistTheme(value);
+		applyThemeClass(value);
+	}
+
+	function updateAndApply(updater) {
+		update((current) => {
+			const value = updater(current);
+			persistTheme(value);
+			applyThemeClass(value);
+			return value;
+		});
+	}
+
 	return {
 		subscribe,
-		set: (value) => {
-			setStore(value);
-			if (typeof window !== 'undefined') {
-				localStorage.setItem('theme', value);
-			}
-			applyThemeClass(value);
-		},
-		update,
-		toggle: () => {
-			update((current) => {
-				const newTheme = current === 'dark' ? 'light' : 'dark';
-				if (typeof window !== 'undefined') {
-					localStorage.setItem('theme', newTheme);
-				}
-				applyThemeClass(newTheme);
-				return newTheme;
-			});
-		}
+		set,
+		update: updateAndApply,
+		toggle: () => updateAndApply((current) => (current === 'dark' ? 'light' : 'dark'))
 	};
 }
 

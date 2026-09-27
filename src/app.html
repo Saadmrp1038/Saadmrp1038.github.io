@@ -10,10 +10,20 @@
 			rel="stylesheet"
 		/>
 		<script>
-			// Prevent flash of wrong theme
+			// Set the initial background view before the page is painted.
 			(function () {
+				document.documentElement.dataset.backgroundView =
+					window.location.hash === '#education' ? 'education' : 'experience';
+
+				// Prevent a flash of the wrong theme, even when storage is unavailable.
+				let savedTheme;
+				try {
+					savedTheme = window.localStorage.getItem('theme');
+				} catch {
+					// Use the system preference for this visit.
+				}
 				const theme =
-					localStorage.getItem('theme') ||
+					(savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : null) ||
 					(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 				if (theme === 'dark') {
 					document.documentElement.classList.add('dark');

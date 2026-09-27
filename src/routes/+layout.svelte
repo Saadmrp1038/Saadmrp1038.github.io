@@ -8,10 +8,6 @@
 
 <svelte:head>
 	<title>Saad Mohammad Rafid Pial</title>
-	<meta
-		name="description"
-		content="Personal website of Saad Mohammad Rafid Pial, an MSCS student at UIUC researching AI for systems, site reliability engineering, cloud reliability, and formal methods."
-	/>
 	<meta name="author" content="Saad Mohammad Rafid Pial" />
 	<meta property="og:title" content="Saad Mohammad Rafid Pial" />
 	<meta

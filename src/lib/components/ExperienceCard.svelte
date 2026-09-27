@@ -23,7 +23,7 @@
 			{#if hasMultipleRoles}
 				<div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
 					<div class="min-w-0">
-						<h2 class="text-base leading-snug sm:text-lg">
+						<h3 class="text-base leading-snug sm:text-lg">
 							{#if group.organizationUrl}
 								<a
 									href={group.organizationUrl}
@@ -37,7 +37,7 @@
 							{:else}
 								{group.organization}
 							{/if}
-						</h2>
+						</h3>
 						{#if group.context}
 							<p class="mt-0.5 text-xs sm:text-sm" style="color: var(--text-muted);">
 								{group.context}
@@ -61,7 +61,7 @@
 							<div
 								class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
 							>
-								<h3 class="text-sm leading-snug sm:text-base">{role.title}</h3>
+								<h4 class="text-sm leading-snug sm:text-base">{role.title}</h4>
 								<span
 									class="date-text shrink-0 text-xs sm:text-sm"
 									style="color: var(--text-muted);"
@@ -94,7 +94,7 @@
 			{:else}
 				{@const role = group.roles[0]}
 				<div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-					<h2 class="text-base leading-snug sm:text-lg">{role.title}</h2>
+					<h3 class="text-base leading-snug sm:text-lg">{role.title}</h3>
 					<span class="date-text shrink-0 text-xs sm:text-sm" style="color: var(--text-muted);">
 						{role.dateRange}
 					</span>

@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
 	import uiucLogo from '$lib/assets/logos/uiuc.png';
@@ -10,6 +11,22 @@
 	import priyoLogo from '$lib/assets/logos/priyo.jpeg';
 
 	let selectedView = $state('experience');
+	let enhanced = $state(false);
+
+	function selectView(view) {
+		selectedView = view;
+		document.documentElement.dataset.backgroundView = view;
+	}
+
+	async function handleViewClick(event, view) {
+		if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+			return;
+		}
+
+		event.preventDefault();
+		selectView(view);
+		await goto(resolve(`/experience#${view}`), { noScroll: true, keepFocus: true });
+	}
 
 	const educationGroups = [
 		{
@@ -147,13 +164,18 @@
 
 	onMount(() => {
 		function syncViewFromHash() {
-			selectedView = window.location.hash === '#education' ? 'education' : 'experience';
+			selectView(window.location.hash === '#education' ? 'education' : 'experience');
 		}
 
 		syncViewFromHash();
+		enhanced = true;
 		window.addEventListener('hashchange', syncViewFromHash);
+		window.addEventListener('popstate', syncViewFromHash);
 
-		return () => window.removeEventListener('hashchange', syncViewFromHash);
+		return () => {
+			window.removeEventListener('hashchange', syncViewFromHash);
+			window.removeEventListener('popstate', syncViewFromHash);
+		};
 	});
 </script>
 
@@ -169,7 +191,7 @@
 </svelte:head>
 
 <main id="main-content" class="min-h-screen" style="background-color: var(--bg-main);">
-	<div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 md:py-20">
+	<div class="background-page mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 md:py-20">
 		<h1
 			class="mb-5 border-b pb-3 text-2xl font-bold sm:mb-6 sm:text-3xl"
 			style="color: var(--text-primary); border-color: var(--border-glass);"
@@ -186,16 +208,15 @@
 				{#each ['experience', 'education'] as view (view)}
 					{@const selected = selectedView === view}
 					<a
-						id={view}
 						href={resolve(
 							view === 'education' ? '/experience#education' : '/experience#experience'
 						)}
-						onclick={() => (selectedView = view)}
+						onclick={(event) => handleViewClick(event, view)}
 						class="inline-flex min-h-11 items-center border-b-2 px-0.5 text-sm font-semibold capitalize transition-colors sm:text-base"
 						style="color: {selected
 							? 'var(--text-primary)'
 							: 'var(--text-muted)'}; border-color: {selected ? 'var(--accent)' : 'transparent'};"
-						aria-current={selected ? 'page' : undefined}
+						aria-current={enhanced && selected ? 'location' : undefined}
 					>
 						{view}
 					</a>
@@ -203,16 +224,41 @@
 			</div>
 		</nav>
 
-		<section aria-labelledby="active-background-heading">
-			<h2 id="active-background-heading" class="sr-only">
-				{selectedView === 'education' ? 'Education' : 'Experience'}
-			</h2>
-
+		<section
+			id="experience"
+			class="background-section scroll-mt-24"
+			aria-labelledby="experience-heading"
+		>
+			<h2 id="experience-heading" class="sr-only">Experience</h2>
 			<div class="glass-panel overflow-hidden">
-				{#each selectedView === 'education' ? educationGroups : experienceGroups as group, index (group.organization)}
+				{#each experienceGroups as group, index (group.organization)}
+					<ExperienceCard {group} divider={index > 0} />
+				{/each}
+			</div>
+		</section>
+
+		<section
+			id="education"
+			class="background-section mt-8 scroll-mt-24"
+			aria-labelledby="education-heading"
+		>
+			<h2 id="education-heading" class="sr-only">Education</h2>
+			<div class="glass-panel overflow-hidden">
+				{#each educationGroups as group, index (group.organization)}
 					<ExperienceCard {group} divider={index > 0} />
 				{/each}
 			</div>
 		</section>
 	</div>
 </main>
+
+<style>
+	:global(html[data-background-view='experience']) .background-page #education,
+	:global(html[data-background-view='education']) .background-page #experience {
+		display: none;
+	}
+
+	:global(html[data-background-view='education']) .background-page #education {
+		margin-top: 0;
+	}
+</style>
