@@ -56,7 +56,8 @@
 				{ name: 'Y Chen' },
 				{ name: 'T Xu' }
 			],
-			venue: 'arXiv',
+			venue: 'NeurIPS (Evaluations and Datasets Track)',
+			venueUrl: 'https://neurips.cc/Conferences/2026',
 			year: '2026',
 			links: [{ label: 'arXiv', href: 'https://arxiv.org/abs/2605.07161' }],
 			abstract:

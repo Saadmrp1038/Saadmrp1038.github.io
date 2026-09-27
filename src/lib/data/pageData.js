@@ -12,6 +12,19 @@ export const RESEARCH_INTERESTS = [
 
 export const NEWS_ITEMS = [
 	{
+		id: 'sregym-neurips-2026',
+		date: 'Sep 2026',
+		segments: [
+			{ text: 'Our paper ' },
+			{
+				text: 'SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios',
+				href: 'https://arxiv.org/abs/2605.07161',
+				kind: 'publication'
+			},
+			{ text: ' was accepted to the NeurIPS 2026 Evaluations and Datasets Track' }
+		]
+	},
+	{
 		id: 'uiuc-mscs-2026',
 		date: 'Aug 2026',
 		segments: [{ text: 'Started my MS in Computer Science at UIUC' }]
