@@ -27,6 +27,7 @@
 		content="About Saad Mohammad Rafid Pial, an MSCS student at UIUC researching AI for systems, site reliability engineering, cloud reliability, and formal methods."
 	/>
 	<link rel="canonical" href="https://saadmrp1038.github.io/" />
+	<meta property="og:url" content="https://saadmrp1038.github.io/" />
 </svelte:head>
 
 <main id="main-content" class="min-h-screen" style="background-color: var(--bg-main);">
