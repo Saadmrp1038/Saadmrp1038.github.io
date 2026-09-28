@@ -15,15 +15,15 @@
 		content="MSCS student at UIUC researching AI for systems, site reliability engineering, cloud reliability, and formal methods."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://saadmrp1038.github.io/og-image.png" />
+	<meta property="og:image" content="https://saadmrp1038.github.io/courage-og.png" />
 	<meta property="og:image:type" content="image/png" />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="630" />
+	<meta property="og:image:width" content="720" />
+	<meta property="og:image:height" content="720" />
 	<meta
 		property="og:image:alt"
-		content="Saad Mohammad Rafid Pial's research portfolio, featuring a Courage the Cowardly Dog illustration"
+		content="Courage the Cowardly Dog illustration with an encouraging quote around its circular border"
 	/>
-	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:card" content="summary" />
 	<link rel="icon" href={titleImage} />
 </svelte:head>
 
