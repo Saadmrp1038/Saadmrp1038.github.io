@@ -3,6 +3,37 @@
 
 	const publications = [
 		{
+			id: 'tlaps-bench',
+			title:
+				'TLAPS-Bench: Formally Proving Correctness of Real-World System Specifications with TLA+ Proof System',
+			authors: [
+				{ name: 'Q Cheng' },
+				{ name: 'R Tang' },
+				{ name: 'SMR Pial', self: true },
+				{ name: 'ZC Cai' },
+				{ name: 'Y Su' },
+				{ name: 'J Clark' },
+				{ name: 'M Thahmid' },
+				{ name: 'MR Sukanya' },
+				{ name: 'C Newcombe' },
+				{ name: 'I Konnov' },
+				{ name: 'S Merz' },
+				{ name: 'X Sun' },
+				{ name: 'M Demirbas' },
+				{ name: 'Y Huang' },
+				{ name: 'MA Kuppe' },
+				{ name: 'T Xu' }
+			],
+			venue: 'arXiv',
+			year: '2026',
+			links: [
+				{ label: 'arXiv', href: 'https://arxiv.org/abs/2611.02849' },
+				{ label: 'Code', href: 'https://github.com/specula-org/TLAPS-Bench' }
+			],
+			abstract:
+				'TLAPS-Bench evaluates whether AI agents can construct correctness proofs for TLA+ system specifications using the TLA+ Proof System (TLAPS). It provides 265 proof targets from 95 specifications and tools for iterative proof development, with checks against reward hacking. On an evaluation of 70 targets across 12 specifications, the best model proved 31 targets (44.3%), showing that building complete proofs remains challenging for frontier AI agents.'
+		},
+		{
 			id: 'specula',
 			title: 'Specula: Scaling Formal Specifications for Autonomous Model Checking of System Code',
 			authors: [
