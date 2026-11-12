@@ -56,6 +56,19 @@ export const NEWS_ITEMS = [
 		]
 	},
 	{
+		id: 'sregym-illinois-cs-news-2026',
+		date: 'Apr 2026',
+		segments: [
+			{ text: 'We got ' },
+			{
+				text: 'featured on Illinois CS News',
+				href: 'https://siebelschool.illinois.edu/news/sregym'
+			},
+			{ text: ' for ' },
+			{ text: 'SREGym', kind: 'project' }
+		]
+	},
+	{
 		id: 'nuevai-chitaly-2025',
 		date: 'Jul 2025',
 		segments: [
@@ -72,19 +85,6 @@ export const NEWS_ITEMS = [
 		id: 'uiuc-research-internship-2025',
 		date: 'May 2025',
 		segments: [{ text: "Began research internship at Professor Tianyin Xu's lab at UIUC" }]
-	},
-	{
-		id: 'sregym-illinois-cs-news-2025',
-		date: 'Apr 2025',
-		segments: [
-			{ text: 'We got ' },
-			{
-				text: 'featured on Illinois CS News',
-				href: 'https://siebelschool.illinois.edu/news/sregym'
-			},
-			{ text: ' for ' },
-			{ text: 'SREGym', kind: 'project' }
-		]
 	},
 	{
 		id: 'buet-graduation-2025',
