@@ -98,20 +98,6 @@
 			]
 		},
 		{
-			organization: 'Oleyn',
-			context: 'Singapore · Remote',
-			logo: oleynLogo,
-			logoAlt: 'Oleyn logo',
-			roles: [
-				{
-					title: 'Software Engineer',
-					dateRange: 'Jul 2024 – Nov 2025',
-					description:
-						'Built the core FastAPI backend with 50+ database tables supporting multi-channel messaging across Messenger, Instagram, Telegram, and WhatsApp. Developed a custom WhatsApp automation server, RAG-based AI responses, and bulk messaging infrastructure handling campaigns to 1,000+ recipients with automated analytics.'
-				}
-			]
-		},
-		{
 			organization: "Professor Anindya Iqbal's Lab",
 			organizationUrl: 'https://scholar.google.com/citations?user=jAuiNFgAAAAJ&hl=en',
 			context: 'Bangladesh University of Engineering and Technology',
@@ -157,6 +143,20 @@
 					dateRange: 'Jul 2024 – Nov 2024',
 					description:
 						'Designed backend architecture for the PriyoPay chatbot system with automated web scraping and admin functionality. Helped build the Flutter mobile app including onboarding, dashboard, and card management systems. Integrated Persona for identity verification and MarqetaJS for safe financial data processing.'
+				}
+			]
+		},
+		{
+			organization: 'Oleyn',
+			context: 'Singapore · Remote',
+			logo: oleynLogo,
+			logoAlt: 'Oleyn logo',
+			roles: [
+				{
+					title: 'Software Engineer',
+					dateRange: 'Jul 2024 – Nov 2024',
+					description:
+						'Built the core FastAPI backend with 50+ database tables supporting multi-channel messaging across Messenger, Instagram, Telegram, and WhatsApp. Developed a custom WhatsApp automation server, RAG-based AI responses, and bulk messaging infrastructure handling campaigns to 1,000+ recipients with automated analytics.'
 				}
 			]
 		}
